@@ -1,0 +1,71 @@
+// fonts
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700|Noto+Sans:400,700|Open+Sans:300,400,600,700&subset=cyrillic');
+
+//// 1. Variables
+//@import "variables";
+
+// 2. Import default variables and available mixins.
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+// @mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
+
+// variables
+
+$baseFont: 'Rubik', sans-serif;
+
+// defaults
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  font-family: $baseFont;
+  //font-family: 'Alegreya Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+}
+
+main{
+  background: #f8f8f8;
+}
+
+// shame
+
+.uk-navbar-container:not(.uk-navbar-transparent){
+  background: #1e87f0;
+}
+
+#app .uk-offcanvas-content .uk-light .uk-navbar-nav > li > a{
+  color: white!important;
+}
+
+.uk-input, .uk-select, .uk-textarea{
+  border-radius: 2em;
+}
+
+.uk-h1{
+  font-size: 2em;
+  font-family: $baseFont
+}
+
+.uk-container-small{
+  margin: 0 auto;
+}
+
+.uk-badge{
+  padding: .2rem .8rem;
+  margin-bottom: .35rem;
+  font-size: .9rem;
+  font-weight: normal;
+  cursor: pointer;
+}

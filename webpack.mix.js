@@ -11,11 +11,6 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/assets/js');
+mix.js('resources/assets/js/app.js', 'public/js');
 
-mix.stylus('resources/assets/stylus/app.styl', 'public/assets/css');
-
-mix.styles([
-  'resources/assets/components/css/uikit.css',
-  'public/assets/css/app.css'
-], 'public/css/all.css');
+mix.sass('resources/assets/scss/app.scss', 'public/css');
