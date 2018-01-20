@@ -1,4 +1,4 @@
-<template>
+<template lang="pug">
     <div class="uk-offcanvas-content">
         <section class="base-section uk-padding">
             <div class="uk-container-small">

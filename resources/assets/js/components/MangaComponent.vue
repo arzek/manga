@@ -1,5 +1,5 @@
-<template>
-    <h1>One MAnga</h1>
+<template lang="pug">
+    h1 One manga
 </template>
 
 <script>

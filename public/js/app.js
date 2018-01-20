@@ -30156,7 +30156,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(43)
 /* template */
-var __vue_template__ = __webpack_require__(44)
+var __vue_template__ = __webpack_require__(51)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -30229,7 +30229,7 @@ exports = module.exports = __webpack_require__(39)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -30696,9 +30696,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 
 
@@ -30712,36 +30709,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 44 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("header-component"),
-      _vm._v(" "),
-      _c("router-view"),
-      _vm._v(" "),
-      _c("sitebar-component")
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-1ee7275d", module.exports)
-  }
-}
-
-/***/ }),
+/* 44 */,
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42240,7 +42208,30 @@ return plugin;
 /* 48 */,
 /* 49 */,
 /* 50 */,
-/* 51 */,
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [_c("header-component"), _c("router-view"), _c("sitebar-component")],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1ee7275d", module.exports)
+  }
+}
+
+/***/ }),
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42253,7 +42244,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(55)
 /* template */
-var __vue_template__ = __webpack_require__(56)
+var __vue_template__ = __webpack_require__(88)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -42326,7 +42317,7 @@ exports = module.exports = __webpack_require__(39)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -42373,14 +42364,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -42390,112 +42373,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      {
-        staticClass: "uk-navbar-container uk-light",
-        attrs: { "uk-navbar": "" }
-      },
-      [
-        _c("div", { staticClass: "uk-navbar-left" }, [
-          _c("ul", { staticClass: "uk-navbar-nav" }, [
-            _c("li", [
-              _c("a", { staticClass: "uk-text-muted" }, [
-                _c("span", { attrs: { "uk-icon": "icon: heart" } })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _vm._v("По популярности "),
-                _c("span", { attrs: { "uk-icon": "icon: triangle-down" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "uk-navbar-dropdown" }, [
-                _c("ul", { staticClass: "uk-nav uk-navbar-dropdown-nav" }, [
-                  _c("li", { staticClass: "uk-active" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("По популярности")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("По алфавиту")])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("Новая манга")])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("Количество Глав")
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "uk-navbar-item" }, [
-            _c("form", { attrs: { action: "javascript:void(0)" } }, [
-              _c("div", { staticClass: "uk-inline" }, [
-                _c("a", {
-                  staticClass: "uk-form-icon uk-form-icon-flip",
-                  attrs: { href: "#", "uk-icon": "icon: search" }
-                }),
-                _vm._v(" "),
-                _c("input", {
-                  staticClass: "uk-input",
-                  attrs: { type: "text" }
-                })
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "uk-navbar-right" }, [
-          _c("ul", { staticClass: "uk-navbar-nav" }, [
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "uk-text-muted",
-                  attrs: { "uk-toggle": "target: #offcanvas-overlay" }
-                },
-                [_c("span", { attrs: { "uk-icon": "icon: menu" } })]
-              )
-            ])
-          ])
-        ])
-      ]
-    )
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-032be6c9", module.exports)
-  }
-}
-
-/***/ }),
+/* 56 */,
 /* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42508,7 +42386,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(60)
 /* template */
-var __vue_template__ = __webpack_require__(61)
+var __vue_template__ = __webpack_require__(87)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -42616,70 +42494,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        attrs: {
-          id: "offcanvas-overlay",
-          "uk-offcanvas": "mode: reveal; overlay: true"
-        }
-      },
-      [
-        _c("div", { staticClass: "uk-offcanvas-bar uk-flex uk-flex-column" }, [
-          _c("button", {
-            staticClass: "uk-offcanvas-close",
-            attrs: { type: "button", "uk-close": "" }
-          }),
-          _vm._v(" "),
-          _c(
-            "ul",
-            {
-              staticClass:
-                "uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"
-            },
-            [
-              _c("li", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Catalog")])
-              ]),
-              _vm._v(" "),
-              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("New")])]),
-              _vm._v(" "),
-              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Random")])]),
-              _vm._v(" "),
-              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Tag")])]),
-              _vm._v(" "),
-              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("History")])])
-            ]
-          )
-        ])
-      ]
-    )
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-222c6c30", module.exports)
-  }
-}
-
-/***/ }),
+/* 61 */,
 /* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -45323,7 +45138,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(67)
 /* template */
-var __vue_template__ = __webpack_require__(68)
+var __vue_template__ = __webpack_require__(89)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45438,48 +45253,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "uk-offcanvas-content" }, [
-    _c("section", { staticClass: "base-section uk-padding" }, [
-      _c("div", { staticClass: "uk-container-small" }, [
-        _c(
-          "div",
-          {
-            staticClass: "uk-child-width-1-1@m",
-            attrs: {
-              "uk-grid": "",
-              "uk-scrollspy": "target: > div; cls:uk-animation-fade; delay: 100"
-            }
-          },
-          [
-            _c("div", [_c("manga-item-component")], 1),
-            _vm._v(" "),
-            _c("div", [_c("manga-item-component")], 1),
-            _vm._v(" "),
-            _c("div", [_c("manga-item-component")], 1)
-          ]
-        )
-      ])
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6c06a34a", module.exports)
-  }
-}
-
-/***/ }),
+/* 68 */,
 /* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -45511,7 +45285,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(73)
 /* template */
-var __vue_template__ = __webpack_require__(74)
+var __vue_template__ = __webpack_require__(85)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45584,7 +45358,7 @@ exports = module.exports = __webpack_require__(39)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45628,125 +45402,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "manga-item-component"
 });
 
 /***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("article", { staticClass: "uk-comment uk-card-default" }, [
-      _c(
-        "header",
-        {
-          staticClass: "uk-comment-header uk-grid-medium uk-flex-top",
-          attrs: { "uk-grid": "" }
-        },
-        [
-          _c("div", { staticClass: "uk-width-auto" }, [
-            _c("img", {
-              staticClass: "uk-comment-avatar",
-              attrs: {
-                src:
-                  "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                width: "340",
-                height: "340",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "uk-width-expand uk-padding" }, [
-            _c("h1", { staticClass: "uk-comment-title" }, [
-              _c(
-                "a",
-                { staticClass: "uk-link-reset uk-h1", attrs: { href: "#" } },
-                [_vm._v("Устроится на хорошую работу.")]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "ul",
-              { staticClass: "uk-comment-meta uk-subnav uk-subnav-divider" },
-              [
-                _c("li", [_vm._v("Манхва")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("162 главы")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("+7799")]),
-                _vm._v(" "),
-                _c("li", [_vm._v("12 дней назад")])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "uk-comment-body" }, [
-              _c("p", [
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("школа")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("комедия")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("веб")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("драма")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("боевик")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [
-                  _vm._v("боевые искусства")
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("гарем")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("романтика")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("школа")]),
-                _vm._v(" "),
-                _c("span", { staticClass: "uk-badge" }, [_vm._v("школа")])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  '\n                    Данная манхва о молодом парне Сон Чхегу у которого умер отец, и ушла мать...\n                    оставив его с братом и сестрой на произвол судьбы. Вскоре он поступает в школу где\n                    намерен получить достойное образование, и в дальнейшем устроится на хорошую работу.\n                    С этого момента и начинается его приключение в "Школе отвязных".\n                '
-                )
-              ])
-            ])
-          ])
-        ]
-      )
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-69e44ee6", module.exports)
-  }
-}
-
-/***/ }),
+/* 74 */,
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45759,7 +45421,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(78)
 /* template */
-var __vue_template__ = __webpack_require__(79)
+var __vue_template__ = __webpack_require__(90)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45853,26 +45515,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("One MAnga")])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-703c2b40", module.exports)
-  }
-}
-
-/***/ }),
+/* 79 */,
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45885,7 +45528,7 @@ var normalizeComponent = __webpack_require__(42)
 /* script */
 var __vue_script__ = __webpack_require__(83)
 /* template */
-var __vue_template__ = __webpack_require__(84)
+var __vue_template__ = __webpack_require__(86)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45979,7 +45622,97 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 84 */
+/* 84 */,
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("article", { staticClass: "uk-comment uk-card-default" }, [
+      _c(
+        "header",
+        {
+          staticClass: "uk-comment-header uk-grid-medium uk-flex-top",
+          attrs: { "uk-grid": "" }
+        },
+        [
+          _c("div", { staticClass: "uk-width-auto" }, [
+            _c("img", {
+              staticClass: "uk-comment-avatar",
+              attrs: {
+                src:
+                  "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
+                width: "340",
+                height: "340",
+                alt: ""
+              }
+            })
+          ]),
+          _c("div", { staticClass: "uk-width-expand uk-padding" }, [
+            _c("h1", { staticClass: "uk-comment-title" }, [
+              _c(
+                "a",
+                { staticClass: "uk-link-reset uk-h1", attrs: { href: "#" } },
+                [_vm._v("Устроится на хорошую работу.")]
+              )
+            ]),
+            _c(
+              "ul",
+              { staticClass: "uk-comment-meta uk-subnav uk-subnav-divider" },
+              [
+                _c("li", [_vm._v("Манхва")]),
+                _c("li", [_vm._v("162 главы")]),
+                _c("li", [_vm._v("+7799")]),
+                _c("li", [_vm._v("12 дней назад")])
+              ]
+            ),
+            _c("div", { staticClass: "uk-comment-body" }, [
+              _c("p", [
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("школа")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("комедия")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("веб")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("драма")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("боевик")]),
+                _c("span", { staticClass: "uk-badge" }, [
+                  _vm._v("боевые искусства")
+                ]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("гарем")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("романтика")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("школа")]),
+                _c("span", { staticClass: "uk-badge" }, [_vm._v("школа")])
+              ]),
+              _c("p", [
+                _vm._v(
+                  'Данная манхва о молодом парне Сон Чхегу у которого умер отец, и ушла мать...\nоставив его с братом и сестрой на произвол судьбы. Вскоре он поступает в школу где\nнамерен получить достойное образование, и в дальнейшем устроится на хорошую работу.\nС этого момента и начинается его приключение в "Школе отвязных".'
+                )
+              ])
+            ])
+          ])
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-69e44ee6", module.exports)
+  }
+}
+
+/***/ }),
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45995,6 +45728,225 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-0513763b", module.exports)
+  }
+}
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        attrs: {
+          id: "offcanvas-overlay",
+          "uk-offcanvas": "mode: reveal; overlay: true"
+        }
+      },
+      [
+        _c("div", { staticClass: "uk-offcanvas-bar uk-flex uk-flex-column" }, [
+          _c("button", {
+            staticClass: "uk-offcanvas-close",
+            attrs: { type: "button", "uk-close": "" }
+          }),
+          _c(
+            "ul",
+            {
+              staticClass:
+                "uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"
+            },
+            [
+              _c("li", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Catalog")])
+              ]),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("New")])]),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Random")])]),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Tag")])]),
+              _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("History")])])
+            ]
+          )
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-222c6c30", module.exports)
+  }
+}
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "nav",
+      {
+        staticClass: "uk-navbar-container uk-light",
+        attrs: { "uk-navbar": "" }
+      },
+      [
+        _c("div", { staticClass: "uk-navbar-left" }, [
+          _c("ul", { staticClass: "uk-navbar-nav" }, [
+            _c("li", [
+              _c("a", { staticClass: "uk-text-muted" }, [
+                _c("span", { attrs: { "uk-icon": "icon: heart" } })
+              ])
+            ]),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _vm._v("По популярности"),
+                _c("span", { attrs: { "uk-icon": "icon: triangle-down" } })
+              ]),
+              _c("div", { staticClass: "uk-navbar-dropdown" }, [
+                _c("ul", { staticClass: "uk-nav uk-navbar-dropdown-nav" }, [
+                  _c("li", { staticClass: "uk-active" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("По популярности")
+                    ])
+                  ]),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("По алфавиту")])
+                  ]),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Новая манга")])
+                  ]),
+                  _c("li", [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _vm._v("Количество Глав")
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _c("div", { staticClass: "uk-navbar-item" }, [
+            _c("form", { attrs: { action: "javascript:void(0)" } }, [
+              _c("div", { staticClass: "uk-inline" }, [
+                _c("a", {
+                  staticClass: "uk-form-icon uk-form-icon-flip",
+                  attrs: { href: "#", "uk-icon": "icon: search" }
+                }),
+                _c("input", {
+                  staticClass: "uk-input",
+                  attrs: { type: "text" }
+                })
+              ])
+            ])
+          ])
+        ]),
+        _c("div", { staticClass: "uk-navbar-right" }, [
+          _c("ul", { staticClass: "uk-navbar-nav" }, [
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "uk-text-muted",
+                  attrs: { "uk-toggle": "target: #offcanvas-overlay" }
+                },
+                [_c("span", { attrs: { "uk-icon": "icon: menu" } })]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-032be6c9", module.exports)
+  }
+}
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "uk-offcanvas-content" }, [
+    _c("section", { staticClass: "base-section uk-padding" }, [
+      _c("div", { staticClass: "uk-container-small" }, [
+        _c(
+          "div",
+          {
+            staticClass: "uk-child-width-1-1@m",
+            attrs: {
+              "uk-grid": "",
+              "uk-scrollspy": "target: > div; cls:uk-animation-fade; delay: 100"
+            }
+          },
+          [
+            _c("div", [_c("manga-item-component")], 1),
+            _vm._v(" "),
+            _c("div", [_c("manga-item-component")], 1),
+            _vm._v(" "),
+            _c("div", [_c("manga-item-component")], 1)
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6c06a34a", module.exports)
+  }
+}
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("h1", [_vm._v("One manga")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-703c2b40", module.exports)
   }
 }
 

@@ -1,11 +1,8 @@
-<template>
-    <div>
-        <header-component></header-component>
-
-        <router-view></router-view>
-
-        <sitebar-component></sitebar-component>
-    </div>
+<template lang="pug">
+    div
+        header-component
+        router-view
+        sitebar-component
 </template>
 
 <script>
