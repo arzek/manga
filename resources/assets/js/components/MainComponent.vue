@@ -1,23 +1,21 @@
 <template lang="pug">
-    div
-        header-component
-        router-view
-        sitebar-component
+
+main.uk-offcanvas-content
+  header-component
+  router-view
+  sitebar-component
+
 </template>
 
 <script>
-    import HeaderComponent from  './HeaderComponent';
-    import SitebarComponent from  './SitebarComponent';
+  import HeaderComponent from  './HeaderComponent';
+  import SitebarComponent from  './SitebarComponent';
 
-    export default {
-        name: "main-component",
-        components: {
-            'header-component': HeaderComponent,
-            'sitebar-component': SitebarComponent
-        }
+  export default {
+    name: 'main-component',
+    components: {
+      'header-component': HeaderComponent,
+      'sitebar-component': SitebarComponent
     }
+  }
 </script>
-
-<style scoped>
-
-</style>

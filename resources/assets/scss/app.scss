@@ -39,10 +39,50 @@ main{
   background: #f8f8f8;
 }
 
+.base-view{
+
+}
+
+.base-view-title{
+  font-weight: 400;
+  padding-bottom: 30px;
+  position: relative;
+  span{
+    position: absolute;
+    right: 0;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    width: calc(100% - 40px);
+    border-bottom: 2px solid #222;
+    display: block;
+  }
+}
+
 // shame
 
+.uk-logo{
+  color: pink;
+}
+
+.uk-overlay > :last-child {
+  font-weight: 100;
+}
+
+.uk-offcanvas-bar {
+  width: 300px;
+  padding-top: 120px;
+}
+
+.uk-offcanvas-container .uk-offcanvas-content {
+  padding-left: 300px;
+}
+
 .uk-navbar-container:not(.uk-navbar-transparent){
-  background: #1e87f0;
+  //background: #1e87f0;
 }
 
 #app .uk-offcanvas-content .uk-light .uk-navbar-nav > li > a{
@@ -62,10 +102,27 @@ main{
   margin: 0 auto;
 }
 
+.uk-comment-avatar{
+  height: 100%;
+  object-fit: cover;
+}
+
 .uk-badge{
   padding: .2rem .8rem;
   margin-bottom: .35rem;
+  margin-right: .35rem;
   font-size: .9rem;
   font-weight: normal;
   cursor: pointer;
+}
+
+.uk-table td,
+.uk-table th {
+  padding: 16px 0;
+}
+
+.uk-card{
+  img{
+    width: 100%;
+  }
 }
