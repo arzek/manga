@@ -1,14 +1,16 @@
 <template lang="pug">
 
   section.base-section.uk-padding
-    div.uk-child-width-1-5.base-view(uk-grid)
+    div.uk-child-width-1-5.base-view(uk-grid uk-lightbox)
+
+
       // mix
       mixin item(title)
         div
           .uk-card.uk-card-default
-            a(href='#')
-              img(src='http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg' alt='')
-            .uk-card-body.uk-overlay.uk-overlay-primary.uk-position-center.uk-padding-small
+            a(data-caption="1" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
+              img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
+            .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
               a.uk-link-muted.uk-card-title= title
 
       .base-view-title.uk-width-1-1.uk-h2.

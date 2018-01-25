@@ -33807,6 +33807,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'manga-view-component'
@@ -33832,7 +33834,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass: "uk-child-width-1-5 base-view",
-          attrs: { "uk-grid": "uk-grid" }
+          attrs: { "uk-grid": "uk-grid", "uk-lightbox": "uk-lightbox" }
         },
         [
           _c("div", { staticClass: "base-view-title uk-width-1-1 uk-h2" }, [
@@ -33841,20 +33843,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -33866,20 +33878,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -33891,20 +33913,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -33916,20 +33948,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -33941,20 +33983,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -33966,20 +34018,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -33991,20 +34053,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34029,20 +34101,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34054,20 +34136,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34079,20 +34171,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34104,20 +34206,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34129,20 +34241,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34167,20 +34289,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34192,20 +34324,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34217,20 +34359,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34242,20 +34394,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34267,20 +34429,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34292,20 +34464,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34317,20 +34499,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34342,20 +34534,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34367,20 +34569,30 @@ var staticRenderFns = [
           ]),
           _c("div", [
             _c("div", { staticClass: "uk-card uk-card-default" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
+              _c(
+                "a",
+                {
                   attrs: {
-                    src:
-                      "http://imgcover.mangachan.me/showfull_retina/uploads/posts/2012-07/thumbs/1341859425_i125583.jpg",
-                    alt: ""
+                    "data-caption": "1",
+                    href:
+                      "http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png"
                   }
-                })
-              ]),
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png",
+                      alt: ""
+                    }
+                  })
+                ]
+              ),
               _c(
                 "div",
                 {
                   staticClass:
-                    "uk-card-body uk-overlay uk-overlay-primary uk-position-center uk-padding-small"
+                    "uk-card-body uk-overlay uk-overlay-default uk-position-center uk-padding-small base-overlay-bottom"
                 },
                 [
                   _c("a", { staticClass: "uk-link-muted uk-card-title" }, [
@@ -34999,6 +35211,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'sitebar-component'
@@ -35060,15 +35287,6 @@ var staticRenderFns = [
               _c("a", { attrs: { href: "#" } }, [
                 _c("span", {
                   staticClass: "uk-margin-small-right",
-                  attrs: { "uk-icon": "icon: hashtag" }
-                }),
-                _vm._v("\nTag")
-              ])
-            ]),
-            _c("li", { staticClass: "uk-margin-small" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("span", {
-                  staticClass: "uk-margin-small-right",
                   attrs: { "uk-icon": "icon: history" }
                 }),
                 _vm._v("\nHistory")
@@ -35076,13 +35294,75 @@ var staticRenderFns = [
             ]),
             _c("li", { staticClass: "uk-nav-divider uk-margin-medium" }),
             _c("li", { staticClass: "uk-margin-small" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Не залупайся пацан")])
+              _c("a", { attrs: { href: "#" } }, [
+                _c("span", {
+                  staticClass: "uk-margin-small-right",
+                  attrs: { "uk-icon": "icon: hashtag" }
+                }),
+                _vm._v("\nTags")
+              ])
             ]),
             _c("li", { staticClass: "uk-margin-small" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("サイクリ")])
-            ]),
-            _c("li", { staticClass: "uk-margin-small" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Наверни манги")])
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("школа")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("комедия")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("веб")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("драма")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("боевик")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("боевые искусства")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("гарем")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("романтика")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("школа")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("школа")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("школа")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("комедия")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("веб")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("драма")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("боевик")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("боевые искусства")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("гарем")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("романтика")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("школа")
+              ]),
+              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
+                _vm._v("школа")
+              ])
             ]),
             _c("li", { staticClass: "uk-nav-divider uk-margin-medium" }),
             _c("li", { staticClass: "uk-margin-small" }, [

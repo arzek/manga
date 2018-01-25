@@ -17,19 +17,34 @@
           Random
       li.uk-margin-small
         a(href='#').
-          #[span.uk-margin-small-right(uk-icon="icon: hashtag")]
-          Tag
-      li.uk-margin-small
-        a(href='#').
           #[span.uk-margin-small-right(uk-icon="icon: history")]
           History
       li.uk-nav-divider.uk-margin-medium
       li.uk-margin-small
-        a(href='#') Не залупайся пацан
+        a(href='#').
+          #[span.uk-margin-small-right(uk-icon="icon: hashtag")]
+          Tags
       li.uk-margin-small
-        a(href='#') サイクリ
-      li.uk-margin-small
-        a(href='#') Наверни манги
+        a.base-tag(href='#') школа
+        a.base-tag(href='#') комедия
+        a.base-tag(href='#') веб
+        a.base-tag(href='#') драма
+        a.base-tag(href='#') боевик
+        a.base-tag(href='#') боевые искусства
+        a.base-tag(href='#') гарем
+        a.base-tag(href='#') романтика
+        a.base-tag(href='#') школа
+        a.base-tag(href='#') школа
+        a.base-tag(href='#') школа
+        a.base-tag(href='#') комедия
+        a.base-tag(href='#') веб
+        a.base-tag(href='#') драма
+        a.base-tag(href='#') боевик
+        a.base-tag(href='#') боевые искусства
+        a.base-tag(href='#') гарем
+        a.base-tag(href='#') романтика
+        a.base-tag(href='#') школа
+        a.base-tag(href='#') школа
       li.uk-nav-divider.uk-margin-medium
       li.uk-margin-small
         a(href='#').

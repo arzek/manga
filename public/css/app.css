@@ -15109,6 +15109,10 @@ main {
   background: #f8f8f8;
 }
 
+.base-section {
+  max-width: 1366px;
+}
+
 .base-view-title {
   font-weight: 400;
   padding-bottom: 30px;
@@ -15128,6 +15132,46 @@ main {
   width: calc(100% - 40px);
   border-bottom: 2px solid #222;
   display: block;
+}
+
+.base-overlay-bottom {
+  top: 80%;
+  padding: 5px 10px;
+}
+
+.base-overlay-bottom .uk-link-muted {
+  text-decoration: none;
+}
+
+.uk-lightbox.uk-overflow-hidden {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.uk-lightbox .uk-lightbox-items > li {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.uk-lightbox .uk-lightbox-items > li .uk-spinner {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.uk-lightbox .uk-lightbox-items > * > * {
+  max-height: initial;
+  max-width: 80%;
+  margin-bottom: 15vh;
+  padding-top: 15vh;
+}
+
+.uk-lightbox [class*='uk-position-top'],
+.uk-lightbox [class*='uk-position-bottom'],
+.uk-lightbox [class*='uk-position-left'],
+.uk-lightbox [class*='uk-position-right'],
+.uk-lightbox [class*='uk-position-center'] {
+  position: fixed !important;
 }
 
 .uk-logo {
@@ -15161,10 +15205,10 @@ main {
   color: white !important;
 }
 
-.uk-input,
-.uk-select,
-.uk-textarea {
-  border-radius: 2em;
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+  border-color: pink;
 }
 
 .uk-h1 {
@@ -15176,10 +15220,18 @@ main {
   margin: 0 auto;
 }
 
+.uk-comment-body {
+  text-align: justify;
+}
+
 .uk-comment-avatar {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.uk-nav li > a {
+  display: inline-block;
 }
 
 .uk-badge {
@@ -15189,6 +15241,21 @@ main {
   font-size: .9rem;
   font-weight: normal;
   cursor: pointer;
+  background: transparent;
+  color: #222;
+  border: 1px solid pink;
+  border-radius: 0;
+}
+
+.uk-badge:focus,
+.uk-badge:hover {
+  color: #222;
+}
+
+.uk-offcanvas-bar .uk-badge {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid pink;
 }
 
 .uk-table td,

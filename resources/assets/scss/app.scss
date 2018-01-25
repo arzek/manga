@@ -43,7 +43,11 @@ main{
 
 }
 
-.base-view-title{
+.base-section{
+  max-width: 1366px;
+}
+
+.base-view-title {
   font-weight: 400;
   padding-bottom: 30px;
   position: relative;
@@ -51,7 +55,7 @@ main{
     position: absolute;
     right: 0;
   }
-  &:after{
+  &:after {
     content: '';
     position: absolute;
     left: 40px;
@@ -62,7 +66,41 @@ main{
   }
 }
 
+.base-overlay-bottom {
+  top: 80%;
+  padding: 5px 10px;
+  .uk-link-muted{
+    text-decoration: none;
+  }
+}
+
 // shame
+
+.uk-lightbox{
+  &.uk-overflow-hidden {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .uk-lightbox-items > li {
+    align-items: flex-start;
+    .uk-spinner{
+      align-self: center;
+    }
+  }
+  .uk-lightbox-items > * > * {
+    max-height: initial;
+    max-width: 80%;
+    margin-bottom: 15vh;
+    padding-top: 15vh;
+  }
+  [class*='uk-position-top'],
+  [class*='uk-position-bottom'],
+  [class*='uk-position-left'],
+  [class*='uk-position-right'],
+  [class*='uk-position-center'] {
+    position: fixed !important;
+  }
+}
 
 .uk-logo{
   color: pink;
@@ -89,9 +127,10 @@ main{
   color: white!important;
 }
 
-.uk-input, .uk-select, .uk-textarea{
-  border-radius: 2em;
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus{
+  border-color: pink;
 }
+
 
 .uk-h1{
   font-size: 2em;
@@ -102,9 +141,17 @@ main{
   margin: 0 auto;
 }
 
+.uk-comment-body{
+  text-align: justify;
+}
+
 .uk-comment-avatar{
   height: 100%;
   object-fit: cover;
+}
+
+.uk-nav li > a {
+  display: inline-block;
 }
 
 .uk-badge{
@@ -114,6 +161,22 @@ main{
   font-size: .9rem;
   font-weight: normal;
   cursor: pointer;
+  background: transparent;
+  color: #222;
+  border: 1px solid pink;
+  border-radius: 0;
+  &:focus,
+  &:hover{
+    color: #222;
+  }
+}
+
+.uk-offcanvas-bar{
+  .uk-badge{
+    background: transparent!important;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid pink;
+  }
 }
 
 .uk-table td,
