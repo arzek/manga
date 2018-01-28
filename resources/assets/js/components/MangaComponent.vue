@@ -50,7 +50,7 @@
                   оставив его с братом и сестрой на произвол судьбы. Вскоре он поступает в школу где
                   намерен получить достойное образование, и в дальнейшем устроится на хорошую работу.
                   С этого момента и начинается его приключение в "Школе отвязных".
-        .uk-card-default.uk-padding
+        div
           table.uk-table.uk-table-divider.uk-margin-remove-bottom
             thead
               tr
@@ -59,56 +59,56 @@
             tbody
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
               tr
                 td
-                  a(href='#') Girl the Wild's   v2 - 260
+                  a.uk-link-reset(href='#') Girl the Wild's   v2 - 260
                 td.uk-table-shrink 2016-11-13
-          ul.uk-pagination.uk-margin
+          ul.uk-pagination.uk-flex-center.uk-margin
             li
               a(href='#')
-                span(uk-pagination-previous)
+                span(uk-icon="icon: chevron-left")
             li
               a(href='#') 1
             li
@@ -121,7 +121,7 @@
               a(href='#') 40
             li
               a(href='#')
-                span(uk-pagination-next)
+                span(uk-icon="icon: chevron-right")
 
 </template>
 

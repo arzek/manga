@@ -1,22 +1,36 @@
 <template lang="pug">
 
-nav.uk-navbar-container.uk-margin-left(uk-navbar)
-  .uk-navbar-item.uk-logo(href="#")
-    span(uk-icon='icon: heart; ratio: 2')
+nav.uk-navbar-container.uk-margin-left.uk-margin-right(uk-navbar)
   .uk-navbar-left
     ul.uk-navbar-nav
       li.uk-margin-right
-        a(href='#') サイクリング肛門 #[span(uk-icon="icon: triangle-down")]
-          .uk-navbar-dropdown.uk-padding-small(uk-dropdown="mode: click; pos: top-right")
-            ul.uk-nav.uk-navbar-dropdown-nav
-              li.uk-active
-                a(href='#') リング肛門
-              li
-                a(href='#') イグ肛門
-              li
-                a(href='#') サイクリ
-              li
-                a(href='#') グ肛門
+        a(href='#') #[span(uk-icon='icon: settings; ratio: 1.5')]
+        .uk-width-xlarge(uk-dropdown="pos: top-left")
+          div.uk-dropdown-grid.uk-child-width-1-2(uk-grid)
+            div
+              ul.uk-nav.uk-dropdown-nav
+                li.uk-nav-header Date
+                li.uk-active
+                  select.uk-select
+                    option 123
+                    option 321
+                li.uk-nav-header Popularity
+                li.uk-active
+                  select.uk-select
+                    option etc.
+                    option etc.
+            div
+              ul.uk-nav.uk-dropdown-nav
+                li.uk-nav-header Name
+                li.uk-active
+                  select.uk-select
+                    option A
+                    option B
+                li.uk-nav-header Something
+                li.uk-active
+                  select.uk-select
+                    option etc.
+                    option etc.
   .uk-navbar-right
     .uk-navbar-item
       form(action='javascript:void(0)')

@@ -43,6 +43,23 @@ main{
 
 }
 
+.base-tag{
+  margin-right: .3rem;
+  transition: all .3s ease-in-out;
+  &:before{
+    content: '#';
+    display: inline-block;
+  }
+}
+
+.uk-offcanvas-bar .uk-nav-default > li > a{
+  &.base-tag{
+    &.active, &:focus{
+      color: white;
+    }
+  }
+}
+
 .base-section{
   max-width: 1366px;
 }
@@ -75,6 +92,12 @@ main{
 }
 
 // shame
+
+
+.uk-offcanvas-bar {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
 .uk-lightbox{
   &.uk-overflow-hidden {
@@ -111,8 +134,8 @@ main{
 }
 
 .uk-offcanvas-bar {
-  width: 300px;
   padding-top: 120px;
+  width: 300px;
 }
 
 .uk-offcanvas-container .uk-offcanvas-content {

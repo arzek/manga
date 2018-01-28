@@ -15109,6 +15109,22 @@ main {
   background: #f8f8f8;
 }
 
+.base-tag {
+  margin-right: .3rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.base-tag:before {
+  content: '#';
+  display: inline-block;
+}
+
+.uk-offcanvas-bar .uk-nav-default > li > a.base-tag.active,
+.uk-offcanvas-bar .uk-nav-default > li > a.base-tag:focus {
+  color: white;
+}
+
 .base-section {
   max-width: 1366px;
 }
@@ -15141,6 +15157,11 @@ main {
 
 .base-overlay-bottom .uk-link-muted {
   text-decoration: none;
+}
+
+.uk-offcanvas-bar {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .uk-lightbox.uk-overflow-hidden {
@@ -15183,8 +15204,8 @@ main {
 }
 
 .uk-offcanvas-bar {
-  width: 300px;
   padding-top: 120px;
+  width: 300px;
 }
 
 .uk-offcanvas-container .uk-offcanvas-content {
