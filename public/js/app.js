@@ -34808,7 +34808,7 @@ exports = module.exports = __webpack_require__(57)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -35157,6 +35157,7 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SitebarComponent__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__SitebarComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__SitebarComponent__);
+//
 //
 //
 //
@@ -35558,101 +35559,120 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "nav",
+      "div",
       {
-        staticClass: "uk-navbar-container uk-margin-left uk-margin-right",
-        attrs: { "uk-navbar": "uk-navbar" }
+        attrs: {
+          "uk-sticky":
+            "sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+        }
       },
       [
-        _c("div", { staticClass: "uk-navbar-left" }, [
-          _c("ul", { staticClass: "uk-navbar-nav" }, [
-            _c("li", { staticClass: "uk-margin-right" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("span", {
-                  attrs: { "uk-icon": "icon: settings; ratio: 1.5" }
-                })
-              ]),
-              _c(
-                "div",
-                {
-                  staticClass: "uk-width-xlarge",
-                  attrs: { "uk-dropdown": "pos: top-left" }
-                },
-                [
+        _c(
+          "nav",
+          {
+            staticClass: "uk-navbar-container uk-margin-left uk-margin-right",
+            attrs: { "uk-navbar": "uk-navbar" }
+          },
+          [
+            _c("div", { staticClass: "uk-navbar-left" }, [
+              _c("ul", { staticClass: "uk-navbar-nav" }, [
+                _c("li", { staticClass: "uk-margin-right" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("span", {
+                      attrs: { "uk-icon": "icon: settings; ratio: 1.5" }
+                    })
+                  ]),
                   _c(
                     "div",
                     {
-                      staticClass: "uk-dropdown-grid uk-child-width-1-2",
-                      attrs: { "uk-grid": "uk-grid" }
+                      staticClass: "uk-width-xlarge",
+                      attrs: { "uk-dropdown": "pos: top-left" }
                     },
                     [
-                      _c("div", [
-                        _c("ul", { staticClass: "uk-nav uk-dropdown-nav" }, [
-                          _c("li", { staticClass: "uk-nav-header" }, [
-                            _vm._v("Date")
+                      _c(
+                        "div",
+                        {
+                          staticClass: "uk-dropdown-grid uk-child-width-1-2",
+                          attrs: { "uk-grid": "uk-grid" }
+                        },
+                        [
+                          _c("div", [
+                            _c(
+                              "ul",
+                              { staticClass: "uk-nav uk-dropdown-nav" },
+                              [
+                                _c("li", { staticClass: "uk-nav-header" }, [
+                                  _vm._v("Date")
+                                ]),
+                                _c("li", { staticClass: "uk-active" }, [
+                                  _c("select", { staticClass: "uk-select" }, [
+                                    _c("option", [_vm._v("123")]),
+                                    _c("option", [_vm._v("321")])
+                                  ])
+                                ]),
+                                _c("li", { staticClass: "uk-nav-header" }, [
+                                  _vm._v("Popularity")
+                                ]),
+                                _c("li", { staticClass: "uk-active" }, [
+                                  _c("select", { staticClass: "uk-select" }, [
+                                    _c("option", [_vm._v("etc.")]),
+                                    _c("option", [_vm._v("etc.")])
+                                  ])
+                                ])
+                              ]
+                            )
                           ]),
-                          _c("li", { staticClass: "uk-active" }, [
-                            _c("select", { staticClass: "uk-select" }, [
-                              _c("option", [_vm._v("123")]),
-                              _c("option", [_vm._v("321")])
-                            ])
-                          ]),
-                          _c("li", { staticClass: "uk-nav-header" }, [
-                            _vm._v("Popularity")
-                          ]),
-                          _c("li", { staticClass: "uk-active" }, [
-                            _c("select", { staticClass: "uk-select" }, [
-                              _c("option", [_vm._v("etc.")]),
-                              _c("option", [_vm._v("etc.")])
-                            ])
+                          _c("div", [
+                            _c(
+                              "ul",
+                              { staticClass: "uk-nav uk-dropdown-nav" },
+                              [
+                                _c("li", { staticClass: "uk-nav-header" }, [
+                                  _vm._v("Name")
+                                ]),
+                                _c("li", { staticClass: "uk-active" }, [
+                                  _c("select", { staticClass: "uk-select" }, [
+                                    _c("option", [_vm._v("A")]),
+                                    _c("option", [_vm._v("B")])
+                                  ])
+                                ]),
+                                _c("li", { staticClass: "uk-nav-header" }, [
+                                  _vm._v("Something")
+                                ]),
+                                _c("li", { staticClass: "uk-active" }, [
+                                  _c("select", { staticClass: "uk-select" }, [
+                                    _c("option", [_vm._v("etc.")]),
+                                    _c("option", [_vm._v("etc.")])
+                                  ])
+                                ])
+                              ]
+                            )
                           ])
-                        ])
-                      ]),
-                      _c("div", [
-                        _c("ul", { staticClass: "uk-nav uk-dropdown-nav" }, [
-                          _c("li", { staticClass: "uk-nav-header" }, [
-                            _vm._v("Name")
-                          ]),
-                          _c("li", { staticClass: "uk-active" }, [
-                            _c("select", { staticClass: "uk-select" }, [
-                              _c("option", [_vm._v("A")]),
-                              _c("option", [_vm._v("B")])
-                            ])
-                          ]),
-                          _c("li", { staticClass: "uk-nav-header" }, [
-                            _vm._v("Something")
-                          ]),
-                          _c("li", { staticClass: "uk-active" }, [
-                            _c("select", { staticClass: "uk-select" }, [
-                              _c("option", [_vm._v("etc.")]),
-                              _c("option", [_vm._v("etc.")])
-                            ])
-                          ])
-                        ])
-                      ])
+                        ]
+                      )
                     ]
                   )
-                ]
-              )
-            ])
-          ])
-        ]),
-        _c("div", { staticClass: "uk-navbar-right" }, [
-          _c("div", { staticClass: "uk-navbar-item" }, [
-            _c("form", { attrs: { action: "javascript:void(0)" } }, [
-              _c("div", { staticClass: "uk-inline" }, [
-                _c("a", {
-                  staticClass: "uk-form-icon uk-form-icon-flip",
-                  attrs: { href: "#", "uk-icon": "icon: search" }
-                }),
-                _c("input", {
-                  staticClass: "uk-input",
-                  attrs: { type: "text" }
-                })
+                ])
+              ])
+            ]),
+            _c("div", { staticClass: "uk-navbar-right" }, [
+              _c("div", { staticClass: "uk-navbar-item" }, [
+                _c("form", { attrs: { action: "javascript:void(0)" } }, [
+                  _c("div", { staticClass: "uk-inline" }, [
+                    _c("a", {
+                      staticClass: "uk-form-icon uk-form-icon-flip",
+                      attrs: { href: "#", "uk-icon": "icon: search" }
+                    }),
+                    _c("input", {
+                      staticClass: "uk-input",
+                      attrs: { type: "text" }
+                    })
+                  ])
+                ])
               ])
             ])
-          ])
-        ])
+          ]
+        )
       ]
     )
   }
