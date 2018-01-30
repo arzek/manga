@@ -34808,7 +34808,7 @@ exports = module.exports = __webpack_require__(57)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -35184,40 +35184,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -35402,121 +35368,41 @@ var staticRenderFns = [
               _c("ul", { staticClass: "uk-navbar-nav" }, [
                 _c("li", { staticClass: "uk-margin-right" }, [
                   _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("something "),
                     _c("span", {
-                      attrs: { "uk-icon": "icon: settings; ratio: 1.5" }
+                      staticClass: "uk-margin-small-left",
+                      attrs: { "uk-icon": "icon: chevron-down" }
                     })
                   ]),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "uk-width-xlarge",
-                      attrs: { "uk-dropdown": "pos: top-left" }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "uk-dropdown-grid uk-child-width-1-2",
-                          attrs: { "uk-grid": "uk-grid" }
-                        },
-                        [
-                          _c("div", [
-                            _c(
-                              "ul",
-                              { staticClass: "uk-nav uk-dropdown-nav" },
-                              [
-                                _c("li", { staticClass: "uk-nav-header" }, [
-                                  _vm._v("Date")
-                                ]),
-                                _c("li", { staticClass: "uk-active" }, [
-                                  _c("select", { staticClass: "uk-select" }, [
-                                    _c("option", [_vm._v("123")]),
-                                    _c("option", [_vm._v("321")])
-                                  ])
-                                ]),
-                                _c("li", { staticClass: "uk-nav-header" }, [
-                                  _vm._v("Popularity")
-                                ]),
-                                _c("li", { staticClass: "uk-active" }, [
-                                  _c("select", { staticClass: "uk-select" }, [
-                                    _c("option", [_vm._v("etc.")]),
-                                    _c("option", [_vm._v("etc.")])
-                                  ])
-                                ])
-                              ]
-                            )
-                          ]),
-                          _c("div", [
-                            _c(
-                              "ul",
-                              { staticClass: "uk-nav uk-dropdown-nav" },
-                              [
-                                _c("li", { staticClass: "uk-nav-header" }, [
-                                  _vm._v("Name")
-                                ]),
-                                _c("li", { staticClass: "uk-active" }, [
-                                  _c("select", { staticClass: "uk-select" }, [
-                                    _c("option", [_vm._v("A")]),
-                                    _c("option", [_vm._v("B")])
-                                  ])
-                                ]),
-                                _c("li", { staticClass: "uk-nav-header" }, [
-                                  _vm._v("Something")
-                                ]),
-                                _c("li", { staticClass: "uk-active" }, [
-                                  _c("select", { staticClass: "uk-select" }, [
-                                    _c("option", [_vm._v("etc.")]),
-                                    _c("option", [_vm._v("etc.")])
-                                  ])
-                                ])
-                              ]
-                            )
+                  _c("div", { attrs: { "uk-dropdown": "pos: top-left" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "uk-dropdown-grid",
+                        attrs: { "uk-grid": "uk-grid" }
+                      },
+                      [
+                        _c("div", [
+                          _c("ul", { staticClass: "uk-nav uk-dropdown-nav" }, [
+                            _c("li", [
+                              _c("a", { attrs: { href: "#" } }, [
+                                _vm._v("Date")
+                              ])
+                            ]),
+                            _c("li", [
+                              _c("a", { attrs: { href: "#" } }, [
+                                _vm._v("Name")
+                              ])
+                            ]),
+                            _c("li", [
+                              _c("a", { attrs: { href: "#" } }, [
+                                _vm._v("Something")
+                              ])
+                            ])
                           ])
-                        ]
-                      )
-                    ]
-                  )
-                ]),
-                _c("li", { staticClass: "uk-margin-right" }, [
-                  _c("div", { staticClass: "uk-navbar-item" }, [
-                    _c("div", { staticClass: "uk-inline" }, [
-                      _c(
-                        "select",
-                        { staticClass: "uk-select uk-form-width-small" },
-                        [
-                          _c("option", [_vm._v("Date")]),
-                          _c("option", [_vm._v("Date")])
-                        ]
-                      )
-                    ])
-                  ])
-                ]),
-                _c("li", { staticClass: "uk-margin-right" }, [
-                  _c("div", { staticClass: "uk-navbar-item" }, [
-                    _c("div", { staticClass: "uk-inline" }, [
-                      _c(
-                        "select",
-                        { staticClass: "uk-select uk-form-width-small" },
-                        [
-                          _c("option", [_vm._v("Popularity")]),
-                          _c("option", [_vm._v("Popularity")])
-                        ]
-                      )
-                    ])
-                  ])
-                ]),
-                _c("li", { staticClass: "uk-margin-right" }, [
-                  _c("div", { staticClass: "uk-navbar-item" }, [
-                    _c("div", { staticClass: "uk-inline" }, [
-                      _c(
-                        "select",
-                        { staticClass: "uk-select uk-form-width-small" },
-                        [
-                          _c("option", [_vm._v("Name")]),
-                          _c("option", [_vm._v("Name")])
-                        ]
-                      )
-                    ])
+                        ])
+                      ]
+                    )
                   ])
                 ])
               ])

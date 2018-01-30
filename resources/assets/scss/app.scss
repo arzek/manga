@@ -19,6 +19,7 @@
 // variables
 
 $baseFont: 'Rubik', sans-serif;
+$baseBorder: 2rem;
 
 // defaults
 
@@ -98,6 +99,11 @@ main{
   padding: 2rem;
 }
 
+.uk-input, .uk-select, .uk-textarea{
+  border-radius: $baseBorder;
+  padding: 0 15px;
+}
+
 
 .uk-lightbox{
   &.uk-overflow-hidden {
@@ -113,8 +119,8 @@ main{
   .uk-lightbox-items > * > * {
     max-height: initial;
     max-width: 80%;
-    margin-bottom: 15vh;
-    padding-top: 15vh;
+    margin-bottom: 5vh;
+    padding-top: 5vh;
   }
   [class*='uk-position-top'],
   [class*='uk-position-bottom'],
@@ -125,8 +131,8 @@ main{
   }
 }
 
-.uk-logo{
-  color: pink;
+.uk-lightbox-toolbar.uk-position-top{
+  background: rgba(0, 0, 0, 0);
 }
 
 .uk-overlay > :last-child {
@@ -145,10 +151,6 @@ main{
 
 #app .uk-offcanvas-content .uk-light .uk-navbar-nav > li > a{
   color: white!important;
-}
-
-.uk-input:focus, .uk-select:focus, .uk-textarea:focus{
-  border-color: pink;
 }
 
 
@@ -183,13 +185,6 @@ main{
   cursor: pointer;
 }
 
-.uk-offcanvas-bar{
-  .uk-badge{
-    background: transparent!important;
-    color: rgba(255, 255, 255, 0.5);
-    border: 1px solid pink;
-  }
-}
 
 .uk-table td,
 .uk-table th {

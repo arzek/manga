@@ -15163,6 +15163,13 @@ main {
   padding: 2rem;
 }
 
+.uk-input,
+.uk-select,
+.uk-textarea {
+  border-radius: 2rem;
+  padding: 0 15px;
+}
+
 .uk-lightbox.uk-overflow-hidden {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -15182,8 +15189,8 @@ main {
 .uk-lightbox .uk-lightbox-items > * > * {
   max-height: initial;
   max-width: 80%;
-  margin-bottom: 15vh;
-  padding-top: 15vh;
+  margin-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 .uk-lightbox [class*='uk-position-top'],
@@ -15194,8 +15201,8 @@ main {
   position: fixed !important;
 }
 
-.uk-logo {
-  color: pink;
+.uk-lightbox-toolbar.uk-position-top {
+  background: transparent;
 }
 
 .uk-overlay > :last-child {
@@ -15223,12 +15230,6 @@ main {
 #app .uk-offcanvas-content .uk-overlay-primary .uk-navbar-nav > li > a,
 #app .uk-offcanvas-content .uk-offcanvas-bar .uk-navbar-nav > li > a {
   color: white !important;
-}
-
-.uk-input:focus,
-.uk-select:focus,
-.uk-textarea:focus {
-  border-color: pink;
 }
 
 .uk-h1 {
@@ -15261,12 +15262,6 @@ main {
   font-size: .9rem;
   font-weight: normal;
   cursor: pointer;
-}
-
-.uk-offcanvas-bar .uk-badge {
-  background: transparent !important;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px solid pink;
 }
 
 .uk-table td,

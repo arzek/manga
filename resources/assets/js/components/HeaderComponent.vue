@@ -5,51 +5,17 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
     .uk-navbar-left
       ul.uk-navbar-nav
         li.uk-margin-right
-          a(href='#') #[span(uk-icon='icon: settings; ratio: 1.5')]
-          .uk-width-xlarge(uk-dropdown="pos: top-left")
-            div.uk-dropdown-grid.uk-child-width-1-2(uk-grid)
+          a(href="#") something #[span.uk-margin-small-left(uk-icon="icon: chevron-down")]
+          div(uk-dropdown="pos: top-left")
+            div.uk-dropdown-grid(uk-grid)
               div
                 ul.uk-nav.uk-dropdown-nav
-                  li.uk-nav-header Date
-                  li.uk-active
-                    select.uk-select
-                      option 123
-                      option 321
-                  li.uk-nav-header Popularity
-                  li.uk-active
-                    select.uk-select
-                      option etc.
-                      option etc.
-              div
-                ul.uk-nav.uk-dropdown-nav
-                  li.uk-nav-header Name
-                  li.uk-active
-                    select.uk-select
-                      option A
-                      option B
-                  li.uk-nav-header Something
-                  li.uk-active
-                    select.uk-select
-                      option etc.
-                      option etc.
-        li.uk-margin-right
-          .uk-navbar-item
-            .uk-inline
-              select.uk-select.uk-form-width-small
-                option Date
-                option Date
-        li.uk-margin-right
-          .uk-navbar-item
-            .uk-inline
-              select.uk-select.uk-form-width-small
-                option Popularity
-                option Popularity
-        li.uk-margin-right
-          .uk-navbar-item
-            .uk-inline
-              select.uk-select.uk-form-width-small
-                option Name
-                option Name
+                  li
+                    a(href="#") Date
+                  li
+                    a(href="#") Name
+                  li
+                    a(href="#") Something
     .uk-navbar-right
       .uk-navbar-item
         form(action='javascript:void(0)')
