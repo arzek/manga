@@ -15120,11 +15120,6 @@ main {
   display: inline-block;
 }
 
-.uk-offcanvas-bar .uk-nav-default > li > a.base-tag.active,
-.uk-offcanvas-bar .uk-nav-default > li > a.base-tag:focus {
-  color: white;
-}
-
 .base-section {
   max-width: 1366px;
 }
@@ -15159,9 +15154,13 @@ main {
   text-decoration: none;
 }
 
-.uk-offcanvas-bar {
-  overflow-x: hidden;
-  overflow-y: scroll;
+.uk-offcanvas-bar .uk-nav-default > li > a.base-tag.active,
+.uk-offcanvas-bar .uk-nav-default > li > a.base-tag:focus {
+  color: white;
+}
+
+.uk-lightbox-toolbar {
+  padding: 2rem;
 }
 
 .uk-lightbox.uk-overflow-hidden {
@@ -15262,15 +15261,6 @@ main {
   font-size: .9rem;
   font-weight: normal;
   cursor: pointer;
-  background: transparent;
-  color: #222;
-  border: 1px solid pink;
-  border-radius: 0;
-}
-
-.uk-badge:focus,
-.uk-badge:hover {
-  color: #222;
 }
 
 .uk-offcanvas-bar .uk-badge {

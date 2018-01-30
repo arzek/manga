@@ -52,14 +52,6 @@ main{
   }
 }
 
-.uk-offcanvas-bar .uk-nav-default > li > a{
-  &.base-tag{
-    &.active, &:focus{
-      color: white;
-    }
-  }
-}
-
 .base-section{
   max-width: 1366px;
 }
@@ -94,10 +86,18 @@ main{
 // shame
 
 
-.uk-offcanvas-bar {
-  overflow-x: hidden;
-  overflow-y: scroll;
+.uk-offcanvas-bar .uk-nav-default > li > a{
+  &.base-tag{
+    &.active, &:focus{
+      color: white;
+    }
+  }
 }
+
+.uk-lightbox-toolbar {
+  padding: 2rem;
+}
+
 
 .uk-lightbox{
   &.uk-overflow-hidden {
@@ -174,21 +174,13 @@ main{
   display: inline-block;
 }
 
-.uk-badge{
+.uk-badge {
   padding: .2rem .8rem;
   margin-bottom: .35rem;
   margin-right: .35rem;
   font-size: .9rem;
   font-weight: normal;
   cursor: pointer;
-  background: transparent;
-  color: #222;
-  border: 1px solid pink;
-  border-radius: 0;
-  &:focus,
-  &:hover{
-    color: #222;
-  }
 }
 
 .uk-offcanvas-bar{

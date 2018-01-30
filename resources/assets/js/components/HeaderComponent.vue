@@ -32,6 +32,24 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
                     select.uk-select
                       option etc.
                       option etc.
+        li.uk-margin-right
+          .uk-navbar-item
+            .uk-inline
+              select.uk-select.uk-form-width-small
+                option Date
+                option Date
+        li.uk-margin-right
+          .uk-navbar-item
+            .uk-inline
+              select.uk-select.uk-form-width-small
+                option Popularity
+                option Popularity
+        li.uk-margin-right
+          .uk-navbar-item
+            .uk-inline
+              select.uk-select.uk-form-width-small
+                option Name
+                option Name
     .uk-navbar-right
       .uk-navbar-item
         form(action='javascript:void(0)')

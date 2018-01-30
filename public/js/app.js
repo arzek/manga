@@ -34808,7 +34808,7 @@ exports = module.exports = __webpack_require__(57)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -35200,6 +35200,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -35215,54 +35233,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -35372,152 +35342,6 @@ var staticRenderFns = [
               ]),
               _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
                 _vm._v("веб")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("драма")
-              ]),
-              _c(
-                "a",
-                { staticClass: "base-tag active", attrs: { href: "#" } },
-                [_vm._v("боевик")]
-              ),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевые искусства")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("гарем")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("романтика")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("комедия")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("веб")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("драма")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевик")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевые искусства")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("гарем")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("романтика")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("комедия")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("веб")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("драма")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевик")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевые искусства")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("гарем")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("романтика")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("комедия")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("веб")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("драма")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевик")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевые искусства")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("гарем")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("романтика")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("комедия")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("веб")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("драма")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевик")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("боевые искусства")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("гарем")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("романтика")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
-              ]),
-              _c("a", { staticClass: "base-tag", attrs: { href: "#" } }, [
-                _vm._v("школа")
               ])
             ]),
             _c("li", { staticClass: "uk-nav-divider uk-margin-medium" }),
@@ -35652,6 +35476,48 @@ var staticRenderFns = [
                       )
                     ]
                   )
+                ]),
+                _c("li", { staticClass: "uk-margin-right" }, [
+                  _c("div", { staticClass: "uk-navbar-item" }, [
+                    _c("div", { staticClass: "uk-inline" }, [
+                      _c(
+                        "select",
+                        { staticClass: "uk-select uk-form-width-small" },
+                        [
+                          _c("option", [_vm._v("Date")]),
+                          _c("option", [_vm._v("Date")])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _c("li", { staticClass: "uk-margin-right" }, [
+                  _c("div", { staticClass: "uk-navbar-item" }, [
+                    _c("div", { staticClass: "uk-inline" }, [
+                      _c(
+                        "select",
+                        { staticClass: "uk-select uk-form-width-small" },
+                        [
+                          _c("option", [_vm._v("Popularity")]),
+                          _c("option", [_vm._v("Popularity")])
+                        ]
+                      )
+                    ])
+                  ])
+                ]),
+                _c("li", { staticClass: "uk-margin-right" }, [
+                  _c("div", { staticClass: "uk-navbar-item" }, [
+                    _c("div", { staticClass: "uk-inline" }, [
+                      _c(
+                        "select",
+                        { staticClass: "uk-select uk-form-width-small" },
+                        [
+                          _c("option", [_vm._v("Name")]),
+                          _c("option", [_vm._v("Name")])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ]),
