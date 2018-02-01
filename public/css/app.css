@@ -15273,3 +15273,7 @@ main {
   width: 100%;
 }
 
+img {
+  outline: 0;
+}
+

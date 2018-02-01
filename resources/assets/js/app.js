@@ -11,12 +11,15 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
 import routes from './routes.js';
+const VueScrollTo = require('vue-scrollto');
+ 
 
 const router = new VueRouter({
     routes
 });
 
 Vue.use(VueRouter);
+Vue.use(VueScrollTo);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

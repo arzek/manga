@@ -6,48 +6,13 @@
       .base-view-title.uk-width-1-1.uk-h2.
         У нас в селі такої хуйні не було #[span 1-30]
 
-      div
+      div(v-for="item in data")
         .uk-card.uk-card-default
-          a(data-caption="1" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
+          a(data-caption="1" :href="item")
+            img(:src='item' alt='')
           .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
             .uk-link-muted.uk-card-title 40/40
-      div
-        .uk-card.uk-card-default
-          a(data-caption="2" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
-          .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-            .uk-link-muted.uk-card-title 40/40
-      div
-        .uk-card.uk-card-default
-          a(data-caption="3" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
-          .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-            .uk-link-muted.uk-card-title 40/40
-      div
-        .uk-card.uk-card-default
-          a(data-caption="4" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
-          .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-            .uk-link-muted.uk-card-title 40/40
-      div
-        .uk-card.uk-card-default
-          a(data-caption="5" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
-          .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-            .uk-link-muted.uk-card-title 40/40
-      div
-        .uk-card.uk-card-default
-          a(data-caption="6" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
-          .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-            .uk-link-muted.uk-card-title 40/40
-      div
-        .uk-card.uk-card-default
-          a(data-caption="7" href="http://img.mangachan.me/manga/-9new/s/1516440886_sweet_home_s01_ch00rsc/sweet_home_ch00_01.png")
-            img(src='http://img3.mangachan.me/manga/a/1343381550_at-the-park/atthepark_p05.png' alt='')
-          .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-            .uk-link-muted.uk-card-title 40/40
+    
 
     div.uk-child-width-1-5.base-view(uk-grid)
 
@@ -136,7 +101,32 @@
 </template>
 
 <script>
+  import VueScrollTo from 'vue-scrollto';
+
   export default {
-    name: 'manga-view-component'
+    name: 'manga-view-component',
+    data() {
+      return {
+        data: [
+          'http://img3.mangachan.me/manga/-9new/7/1517352667_7/02.png',
+          'http://img.mangachan.me/manga/-9new/7/1517352667_7/03.png',
+          'http://img3.mangachan.me/manga/-9new/7/1517352667_7/04.png',
+          'http://img.mangachan.me/manga/-9new/7/1517352667_7/05.png',
+          'http://img3.mangachan.me/manga/-9new/7/1517352667_7/06.png'
+        ]
+      }
+    },
+    mounted() {
+      document.addEventListener('itemshow',function (e) {
+        window.scrollTo(0,0);
+        var timeout = setTimeout(function(){
+            var img = e.path[0].children[0];
+            img.scrollIntoView();
+            img.setAttribute('tabindex',1);
+            img.focus();
+            clearTimeout(timeout);
+        },100)
+    });
+    }
   }
 </script>
