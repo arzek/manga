@@ -6,20 +6,19 @@
  */
 
 require('./bootstrap');
+require('./uikit');
 
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
 import routes from './routes.js';
-const VueScrollTo = require('vue-scrollto');
- 
+
 
 const router = new VueRouter({
     routes
 });
 
 Vue.use(VueRouter);
-Vue.use(VueScrollTo);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -32,7 +31,3 @@ const app = new Vue({
     el: '#app',
     router
 });
-
-window.UIKit = require('uikit');
-window.Icons = require('uikit/dist/js/uikit-icons');
-UIKit.use(Icons);

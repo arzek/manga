@@ -101,7 +101,7 @@
 </template>
 
 <script>
-  import VueScrollTo from 'vue-scrollto';
+  import scrollIntoView from 'scroll-into-view';
 
   export default {
     name: 'manga-view-component',
@@ -117,16 +117,8 @@
       }
     },
     mounted() {
-      document.addEventListener('itemshow',function (e) {
-        window.scrollTo(0,0);
-        var timeout = setTimeout(function(){
-            var img = e.path[0].children[0];
-            img.scrollIntoView();
-            img.setAttribute('tabindex',1);
-            img.focus();
-            clearTimeout(timeout);
-        },100)
-    });
+      console.log(scrollIntoView);
+
     }
   }
 </script>
