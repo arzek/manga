@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::post('/catalog','MainController@getCatalog');
+Route::post('/manga','MainController@getManga');

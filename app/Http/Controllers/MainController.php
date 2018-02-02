@@ -3,11 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\CatalogRepository;
+use App\Repositories\MangaRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
+/**
+ * Class MainController
+ * @package App\Http\Controllers
+ */
 class MainController extends Controller
 {
+    /**
+     * @param Request $request
+     * @param CatalogRepository $catalogRepository
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function getCatalog(Request $request, CatalogRepository $catalogRepository)
     {
         if ($request->input('order')) {
@@ -32,5 +42,30 @@ class MainController extends Controller
             ]);
         }
 
+    }
+
+    /**
+     * @param Request $request
+     * @param MangaRepository $mangaRepository
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getManga(Request $request, MangaRepository $mangaRepository)
+    {
+        $request->validate([
+            'id' => 'required',
+        ]);
+
+        try {
+            $res = $mangaRepository->getById($request->input('id'));
+            return response()->json([
+                'status' => true,
+                'data' => $res
+            ]);
+        } catch (\Exception $exception) {
+            return response()->json([
+                'status' => false,
+                'message' => $exception->getMessage()
+            ]);
+        }
     }
 }
