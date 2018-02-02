@@ -9,6 +9,8 @@
 namespace App\Repositories;
 
 use Curl\Curl;
+use Illuminate\Support\Facades\Cache;
+use Mockery\Exception;
 
 /**
  * Class CatalogRepository
@@ -133,8 +135,6 @@ class CatalogRepository
 
     public function get()
     {
-        $curl = new Curl();
-
         $data = [
             'secretlinkType' => getenv('SECRET_LINK_TYPE')
         ];
@@ -143,14 +143,26 @@ class CatalogRepository
             $data['order'] = $this->getOrder();
         }
 
-        /**
-         * TODO Досисати
-         */
+        if ($this->getType()) {
+            $data['type'] = $this->getType();
+        }
 
-        $curl->get(getenv('API_MANGA'),[
+        if ($this->getTags()) {
+            $data['tags'] = $this->getTags();
+        }
 
-        ]);
+
+        $uri = http_build_query($data);
 
 
+        return Cache::store('redis')->remember($uri, 1440, function () use ($uri) {
+            $curl = new Curl();
+            $curl->get(getenv('API_MANGA_CATALOG').$uri);
+            if (!$curl->error) {
+                return $curl->rawResponse;
+            } else {
+                throw new Exception('Error API');
+            }
+        });
     }
 }
