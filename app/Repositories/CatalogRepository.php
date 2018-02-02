@@ -133,6 +133,9 @@ class CatalogRepository
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
     public function get()
     {
         $data = [
