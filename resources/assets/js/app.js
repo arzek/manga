@@ -3,6 +3,7 @@ import './uikit';
 import VueRouter from 'vue-router';
 import routes from './routes.js';
 import MainComponent from './components/MainComponent';
+import store from './vuex';
 
 
 window.Vue = require('vue');
@@ -17,5 +18,6 @@ Vue.component('main-component', MainComponent);
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store
 });

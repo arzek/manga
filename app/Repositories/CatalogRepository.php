@@ -162,7 +162,7 @@ class CatalogRepository
             $curl = new Curl();
             $curl->get($url);
             if (!$curl->error) {
-                return $curl->rawResponse;
+                return json_decode($curl->rawResponse,1);
             } else {
                 throw new Exception('Error API');
             }
