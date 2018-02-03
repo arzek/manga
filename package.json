@@ -11,11 +11,20 @@
     },
     "devDependencies": {
         "axios": "^0.17",
-        "bootstrap-sass": "^3.3.7",
+        "browser-sync": "^2.23.5",
+        "browser-sync-webpack-plugin": "^1.2.0",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
-        "laravel-mix": "^1.0",
+        "laravel-mix": "^1.7.2",
         "lodash": "^4.17.4",
+        "pug": "^2.0.0-rc.4",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.1",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "scroll-into-view": "^1.9.1",
+        "uikit": "^3.0.0-beta.38",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
     }
 }

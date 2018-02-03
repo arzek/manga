@@ -1,0 +1,201 @@
+// fonts
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,700|Noto+Sans:400,700|Open+Sans:300,400,600,700&subset=cyrillic');
+
+//// 1. Variables
+//@import "variables";
+
+// 2. Import default variables and available mixins.
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+// @mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
+
+// variables
+
+$baseFont: 'Rubik', sans-serif;
+$baseBorder: 2rem;
+
+// defaults
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  font-family: $baseFont;
+  //font-family: 'Alegreya Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+}
+
+main{
+  background: #f8f8f8;
+}
+
+.base-view{
+
+}
+
+.base-tag{
+  margin-right: .3rem;
+  transition: all .3s ease-in-out;
+  &:before{
+    content: '#';
+    display: inline-block;
+  }
+}
+
+.base-section{
+  max-width: 1366px;
+}
+
+.base-view-title {
+  font-weight: 400;
+  padding-bottom: 30px;
+  position: relative;
+  span{
+    position: absolute;
+    right: 0;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    width: calc(100% - 40px);
+    border-bottom: 2px solid #222;
+    display: block;
+  }
+}
+
+.base-overlay-bottom {
+  top: 80%;
+  padding: 5px 10px;
+  .uk-link-muted{
+    text-decoration: none;
+  }
+}
+
+// shame
+
+
+.uk-offcanvas-bar .uk-nav-default > li > a{
+  &.base-tag{
+    &.active, &:focus{
+      color: white;
+    }
+  }
+}
+
+.uk-lightbox-toolbar {
+  padding: 2rem;
+}
+
+.uk-input, .uk-select, .uk-textarea{
+  border-radius: $baseBorder;
+  padding: 0 15px;
+}
+
+
+.uk-lightbox{
+  &.uk-overflow-hidden {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .uk-lightbox-items > li {
+    align-items: flex-start;
+    .uk-spinner{
+      align-self: center;
+    }
+  }
+  .uk-lightbox-items > * > * {
+    max-height: initial;
+    max-width: 80%;
+    margin-bottom: 5vh;
+    padding-top: 5vh;
+  }
+  [class*='uk-position-top'],
+  [class*='uk-position-bottom'],
+  [class*='uk-position-left'],
+  [class*='uk-position-right'],
+  [class*='uk-position-center'] {
+    position: fixed !important;
+  }
+}
+
+.uk-lightbox-toolbar.uk-position-top{
+  background: rgba(0, 0, 0, 0);
+}
+
+.uk-overlay > :last-child {
+  font-weight: 100;
+}
+
+.uk-offcanvas-bar {
+  padding-top: 120px;
+  width: 300px;
+}
+
+.uk-offcanvas-container .uk-offcanvas-content {
+  padding-left: 300px;
+}
+
+
+#app .uk-offcanvas-content .uk-light .uk-navbar-nav > li > a{
+  color: white!important;
+}
+
+
+.uk-h1{
+  font-size: 2em;
+  font-family: $baseFont
+}
+
+.uk-container-small{
+  margin: 0 auto;
+}
+
+.uk-comment-body{
+  text-align: justify;
+}
+
+.uk-comment-avatar{
+  height: 100%;
+  object-fit: cover;
+}
+
+.uk-nav li > a {
+  display: inline-block;
+}
+
+.uk-badge {
+  padding: .2rem .8rem;
+  margin-bottom: .35rem;
+  margin-right: .35rem;
+  font-size: .9rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+
+.uk-table td,
+.uk-table th {
+  padding: 16px 0;
+}
+
+.uk-card{
+  img{
+    width: 100%;
+  }
+}
+img {
+  outline: 0
+}
