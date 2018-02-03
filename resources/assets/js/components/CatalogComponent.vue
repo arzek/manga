@@ -1,8 +1,7 @@
 <template lang="pug">
 
   section.base-section.uk-padding(uk-scrollspy='target: > article; cls:uk-animation-fade; delay: 100')
-    manga-item-component(v-for="item in items" :item="item")
-
+    manga-item-component(v-for="item in items"  :key="item.id" :item="item")
 
 </template>
 

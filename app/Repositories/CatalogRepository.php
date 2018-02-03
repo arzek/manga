@@ -154,18 +154,22 @@ class CatalogRepository
             $data['tags'] = $this->getTags();
         }
 
-
         $uri = http_build_query($data);
         $url = getenv('API_MANGA_CATALOG').$uri;
 
-        return Cache::store('redis')->remember($url, 1440, function () use ($url) {
+        return Cache::store('redis')->remember($url, 10, function () use ($url) {
             $curl = new Curl();
             $curl->get($url);
             if (!$curl->error) {
-                return json_decode($curl->rawResponse,1);
+                return $this->dataFormatting(json_decode($curl->rawResponse,1));
             } else {
                 throw new Exception('Error API');
             }
         });
+    }
+
+    private function dataFormatting(array $data)
+    {
+        return $data['data'];
     }
 }

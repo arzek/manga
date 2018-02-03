@@ -48,10 +48,16 @@ export default new Vuex.Store({
             }
 
             axios.post('/catalog',data).then( (response) => {
-                //commit('setDataCatalog',{ data: response.data.data});
+                commit('setDataCatalog',{ data: response.data});
             })
 
 
+        },
+        getMangaById({commit},id) {
+            axios.post('/manga',{ id: id }).then( (response) => {
+                console.log(response);
+                //commit('setDataCatalog',{ data: response.data});
+            })
         }
     }
 })
