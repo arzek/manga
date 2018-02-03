@@ -101,8 +101,6 @@
 </template>
 
 <script>
-  import scrollIntoView from 'scroll-into-view';
-
   export default {
     name: 'manga-view-component',
     data() {
@@ -117,8 +115,6 @@
       }
     },
     mounted() {
-      console.log(scrollIntoView);
-
     }
   }
 </script>
