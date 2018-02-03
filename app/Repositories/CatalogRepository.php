@@ -46,7 +46,7 @@ class CatalogRepository
     /**
      * @return string
      */
-    public function getOrder(): string
+    public function getOrder()
     {
         return $this->order;
     }
@@ -64,7 +64,7 @@ class CatalogRepository
     /**
      * @return string
      */
-    public function getType(): string
+    public function getType()
     {
         return $this->type;
     }
@@ -82,7 +82,7 @@ class CatalogRepository
     /**
      * @return string
      */
-    public function getTags(): string
+    public function getTags()
     {
         return $this->tags;
     }
@@ -100,7 +100,7 @@ class CatalogRepository
     /**
      * @return string
      */
-    public function getText(): string
+    public function getText()
     {
         return $this->text;
     }
@@ -118,7 +118,7 @@ class CatalogRepository
     /**
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus()
     {
         return $this->status;
     }
@@ -156,11 +156,11 @@ class CatalogRepository
 
 
         $uri = http_build_query($data);
+        $url = getenv('API_MANGA_CATALOG').$uri;
 
-
-        return Cache::store('redis')->remember($uri, 1440, function () use ($uri) {
+        return Cache::store('redis')->remember($url, 1440, function () use ($url) {
             $curl = new Curl();
-            $curl->get(getenv('API_MANGA_CATALOG').$uri);
+            $curl->get($url);
             if (!$curl->error) {
                 return $curl->rawResponse;
             } else {

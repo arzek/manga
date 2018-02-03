@@ -26,10 +26,10 @@ class MangaRepository
         ];
 
         $uri = http_build_query($data);
-
-        return Cache::store('redis')->remember($uri,1440, function () use ($uri) {
+        $url = getenv('API_MANGA_MANGA').$uri;
+        return Cache::store('redis')->remember($url,1440, function () use ($url) {
             $curl = new Curl();
-            $curl->get(getenv('API_MANGA_MANGA').$uri);
+            $curl->get($url);
             if (!$curl->error) {
                 return $this->dataFormatting(json_decode($curl->rawResponse,1));
             } else {
