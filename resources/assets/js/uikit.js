@@ -1,5 +1,8 @@
-window.UIKit = require('uikit');
-window.Icons = require('uikit/dist/js/uikit-icons');
+import UIKit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+window.UIKit = UIKit;
+window.Icons = Icons;
 UIKit.use(Icons);
 
 import scrollIntoView from 'scroll-into-view';
