@@ -8,7 +8,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         filters: {
-            order: 'popular',
+            order: {
+                name: 'Популярность',
+                value: 'popular'
+            },
             type: null,
             tags: null
         },
@@ -29,14 +32,17 @@ export default new Vuex.Store({
     mutations: {
         setDataCatalog(state,{ data }) {
             state.data.catalog = data;
+        },
+        setFilterItem: (state,{ field, data } ) => {
+            state.filters[field] = data;
         }
     },
     actions: {
         getCatalogDataFromApi({commit,state}) {
-            let data = [];
+            let data = {};
 
             if (state.filters.order) {
-                data.order = state.filters.order;
+                data.order = state.filters.order.value;
             }
 
             if (state.filters.type) {

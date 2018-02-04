@@ -16,21 +16,13 @@ article.uk-comment.uk-margin-large-bottom
         p
           span.uk-badge(v-for="tag in tags") {{ tag }}
 
-        <!--p.-->
-          <!--Данная манхва о молодом парне Сон Чхегу у которого умер отец, и ушла мать...-->
-          <!--оставив его с братом и сестрой на произвол судьбы. Вскоре он поступает в школу где-->
-          <!--намерен получить достойное образование, и в дальнейшем устроится на хорошую работу.-->
-          <!--С этого момента и начинается его приключение в "Школе отвязных".-->
 
 </template>
 
 <script>
-  export default {
+    export default {
     name: 'manga-item-component',
     props: ['item'],
-    mounted() {
-        //this.$store.dispatch('getMangaById',this.item.id);
-    },
     computed: {
         tags() {
             return this.item.tags.split(', ');

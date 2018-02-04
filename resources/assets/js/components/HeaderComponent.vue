@@ -5,23 +5,23 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
     .uk-navbar-left
       ul.uk-navbar-nav
         li.uk-margin-right
-          a(href="#") something #[span.uk-margin-small-left(uk-icon="icon: chevron-down")]
+          a(href="#") {{ order.name }} #[span.uk-margin-small-left(uk-icon="icon: chevron-down")]
           div(uk-dropdown="pos: top-left")
             div.uk-dropdown-grid(uk-grid)
               div
                 ul.uk-nav.uk-dropdown-nav
-                  li
-                    a(href="#") Date
-                  li
-                    a(href="#") Name
-                  li
-                    a(href="#") Something
+                  li(v-for="item in order_list")
+                    a(@click.self.prevent="setOrder(item)") {{ item.name }}
+
     .uk-navbar-right
       .uk-navbar-item
-        form(action='javascript:void(0)')
-          .uk-inline
-            a.uk-form-icon.uk-form-icon-flip(href='#' uk-icon='icon: search')
-            input.uk-input(type="text")
+        .uk-inline
+            a.uk-form-icon.uk-form-icon-flip.uk-icon(@click="setSearch()")
+                svg(width='20', height='20', viewbox='0 0 20 20', xmlns='http://www.w3.org/2000/svg', ratio='1')
+                    circle(fill='none', stroke='#000', stroke-width='1.1', cx='9', cy='9', r='7')
+                    path(fill='none', stroke='#000', stroke-width='1.1', d='M14,14 L18,18 L14,14 Z')
+            input.uk-input(type='search')
+
 
 </template>
 
@@ -31,7 +31,75 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
 
   export default {
     components: {SitebarComponent},
-    name: 'header-component'
+    name: 'header-component',
+    data() {
+        return {
+            text_search: '',
+            order_items: [
+                {
+                    name: 'Популярность',
+                    value: 'popular'
+                },
+                {
+                    name: 'Дата',
+                    value: 'newest'
+                },
+                {
+                    name: 'Имя',
+                    value: 'catalog'
+                },
+                {
+                    name: 'Главы',
+                    value: 'sortch'
+                }
+
+            ]
+        }
+    },
+    computed: {
+        order() {
+            return this.$store.getters.getFilterItem('order');
+        },
+        order_list() {
+            return this.order_items.filter( item => {
+               return this.order.value !== item.value;
+            });
+        }
+    },
+    methods: {
+        setOrder(data) {
+            this.$store.commit('setFilterItem',{
+                field: 'order',
+                data: data
+            });
+            this.$store.dispatch('getCatalogDataFromApi');
+        },
+        setSearch() {
+            if (this.text_search) {
+                this.$store.commit('setFilterItem',{
+                    field: 'type',
+                    data: 'search'
+                });
+                this.$store.commit('setFilterItem',{
+                    field: 'tags',
+                    data: this.text_search
+                });
+            } else {
+                this.$store.commit('setFilterItem',{
+                    field: 'type',
+                    data: null
+                });
+                this.$store.commit('setFilterItem',{
+                    field: 'tags',
+                    data: null
+                });
+            }
+            this.$store.dispatch('getCatalogDataFromApi');
+        }
+    },
+    watch: {
+
+    }
   }
 
 </script>
