@@ -40,8 +40,37 @@ main{
   background: #f8f8f8;
 }
 
-.base-view{
+.base-section{
+  min-height: calc(100vh - 80px);
+  position: relative;
+}
 
+.spinner-container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uk-comment{
+  .uk-h3{
+    height: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+}
+
+.uk-comment-avatar{
+  width: 100%;
+}
+
+.uk-spinner.uk-icon{
+  position: relative;
+  top: -70px
 }
 
 .base-tag{

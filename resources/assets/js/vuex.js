@@ -40,6 +40,7 @@ export default new Vuex.Store({
     actions: {
         getCatalogDataFromApi({commit,state}) {
             let data = {};
+            commit('setDataCatalog',{ data: []});
 
             if (state.filters.order) {
                 data.order = state.filters.order.value;
@@ -55,7 +56,7 @@ export default new Vuex.Store({
 
             axios.post('/catalog',data).then( (response) => {
                 commit('setDataCatalog',{ data: response.data});
-            })
+            });
 
 
         },
@@ -63,10 +64,10 @@ export default new Vuex.Store({
             axios.post('/manga',{ id: id }).then( (response) => {
                 console.log(response);
                 //commit('setDataCatalog',{ data: response.data});
-            })
+            });
         }
     }
-})
+});
 
 
 // export default new Vuex.Store({

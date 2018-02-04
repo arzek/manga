@@ -513,12 +513,6 @@ module.exports = g;
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(19);
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -614,6 +608,12 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(19);
 
 /***/ }),
 /* 5 */
@@ -12060,7 +12060,7 @@ window._ = __webpack_require__(17);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(3);
+window.axios = __webpack_require__(4);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -29225,7 +29225,7 @@ module.exports = function(module) {
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(5);
 var Axios = __webpack_require__(21);
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(3);
 
 /**
  * Create an instance of Axios
@@ -29308,7 +29308,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(3);
 var utils = __webpack_require__(0);
 var InterceptorManager = __webpack_require__(30);
 var dispatchRequest = __webpack_require__(31);
@@ -29849,7 +29849,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(32);
 var isCancel = __webpack_require__(9);
-var defaults = __webpack_require__(4);
+var defaults = __webpack_require__(3);
 var isAbsoluteURL = __webpack_require__(33);
 var combineURLs = __webpack_require__(34);
 
@@ -44766,6 +44766,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -44857,6 +44863,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'manga-item-component',
@@ -44876,50 +44883,55 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("article", { staticClass: "uk-comment uk-margin-large-bottom" }, [
-    _c(
-      "header",
-      {
-        staticClass: "uk-comment-header uk-grid-medium uk-flex-stretch",
-        attrs: { "uk-grid": "uk-grid" }
-      },
-      [
-        _c("div", { staticClass: "uk-width-auto" }, [
-          _c("img", {
-            staticClass: "uk-comment-avatar",
-            attrs: { src: _vm.item.img, width: "200", height: "200", alt: "" }
-          })
-        ]),
-        _c("div", { staticClass: "uk-width-expand" }, [
-          _c("h1", { staticClass: "uk-comment-title" }, [
-            _c(
-              "a",
-              { staticClass: "uk-link-reset uk-h1", attrs: { href: "#" } },
-              [_vm._v(_vm._s(_vm.item.title_full))]
-            )
+  return _c("div", [
+    _c("article", { staticClass: "uk-comment uk-margin-large-bottom" }, [
+      _c(
+        "header",
+        {
+          staticClass: "uk-comment-header uk-grid-medium uk-flex-stretch",
+          attrs: { "uk-grid": "uk-grid" }
+        },
+        [
+          _c("div", { staticClass: "uk-width-1-1" }, [
+            _c("img", {
+              staticClass: "uk-comment-avatar",
+              attrs: { src: _vm.item.img, alt: "" }
+            })
           ]),
-          _c(
-            "ul",
-            { staticClass: "uk-comment-meta uk-subnav uk-subnav-divider" },
-            [
-              _c("li", [_vm._v(_vm._s(_vm.item.type))]),
-              _c("li", [_vm._v(_vm._s(_vm.item.count_ch) + " главы")]),
-              _c("li", [_vm._v("+" + _vm._s(_vm.item.rating))])
-            ]
-          ),
-          _c("div", { staticClass: "uk-comment-body" }, [
+          _c("div", { staticClass: "uk-width-1-1" }, [
+            _c("h1", { staticClass: "uk-h3" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "uk-link-reset",
+                  attrs: { href: "#", title: _vm.item.title_full }
+                },
+                [_vm._v(_vm._s(_vm.item.title_full))]
+              )
+            ]),
             _c(
-              "p",
-              _vm._l(_vm.tags, function(tag) {
-                return _c("span", { staticClass: "uk-badge" }, [
-                  _vm._v(_vm._s(tag))
-                ])
-              })
-            )
+              "ul",
+              { staticClass: "uk-comment-meta uk-subnav uk-subnav-divider" },
+              [
+                _c("li", [_vm._v(_vm._s(_vm.item.type))]),
+                _c("li", [_vm._v(_vm._s(_vm.item.count_ch) + " главы")]),
+                _c("li", [_vm._v("+" + _vm._s(_vm.item.rating))])
+              ]
+            ),
+            _c("div", { staticClass: "uk-comment-body" }, [
+              _c(
+                "p",
+                _vm._l(_vm.tags, function(tag) {
+                  return _c("span", { staticClass: "uk-badge" }, [
+                    _vm._v(_vm._s(tag))
+                  ])
+                })
+              )
+            ])
           ])
-        ])
-      ]
-    )
+        ]
+      )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -44940,18 +44952,40 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "section",
-    {
-      staticClass: "base-section uk-padding",
-      attrs: {
-        "uk-scrollspy": "target: > article; cls:uk-animation-fade; delay: 100"
-      }
-    },
-    _vm._l(_vm.items, function(item) {
-      return _c("manga-item-component", { key: item.id, attrs: { item: item } })
-    })
-  )
+  return _c("div", { staticClass: "base-section" }, [
+    !_vm.items.length
+      ? _c("div", { staticClass: "spinner-container" }, [
+          _c("div", { attrs: { "uk-spinner": "ratio: 2" } })
+        ])
+      : _vm._e(),
+    _vm.items.length
+      ? _c(
+          "section",
+          {
+            staticClass: "uk-padding",
+            attrs: {
+              "uk-scrollspy":
+                "target: > article; cls:uk-animation-fade; delay: 100"
+            }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "uk-grid-medium uk-child-width-1-3 uk-text-left",
+                attrs: { "uk-grid": "uk-grid" }
+              },
+              _vm._l(_vm.items, function(item) {
+                return _c("manga-item-component", {
+                  key: item.id,
+                  attrs: { item: item }
+                })
+              })
+            )
+          ]
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -47052,7 +47086,7 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 
 
@@ -47107,6 +47141,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
                 state = _ref3.state;
 
             var data = {};
+            commit('setDataCatalog', { data: [] });
 
             if (state.filters.order) {
                 data.order = state.filters.order.value;

@@ -1,7 +1,13 @@
 <template lang="pug">
 
-  section.base-section.uk-padding(uk-scrollspy='target: > article; cls:uk-animation-fade; delay: 100')
-    manga-item-component(v-for="item in items",:key="item.id",:item="item")
+  .base-section
+
+    div.spinner-container(v-if='!items.length')
+      div(uk-spinner='ratio: 2')
+
+    section.uk-padding(v-if='items.length', uk-scrollspy='target: > article; cls:uk-animation-fade; delay: 100')
+      .uk-grid-medium.uk-child-width-1-3.uk-text-left(uk-grid)
+        manga-item-component(v-for="item in items", :key="item.id", :item="item")
 
 </template>
 

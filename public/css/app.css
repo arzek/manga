@@ -15109,6 +15109,43 @@ main {
   background: #f8f8f8;
 }
 
+.base-section {
+  min-height: calc(100vh - 80px);
+  position: relative;
+}
+
+.spinner-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.uk-comment .uk-h3 {
+  height: 1.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.uk-comment-avatar {
+  width: 100%;
+}
+
+.uk-spinner.uk-icon {
+  position: relative;
+  top: -70px;
+}
+
 .base-tag {
   margin-right: .3rem;
   -webkit-transition: all .3s ease-in-out;
