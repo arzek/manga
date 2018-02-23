@@ -2,7 +2,9 @@
 
 main.uk-offcanvas-content
   header-component
+
   router-view
+
   sitebar-component
 
 </template>

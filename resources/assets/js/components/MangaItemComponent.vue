@@ -7,7 +7,7 @@ div
         img.uk-comment-avatar(:src="item.img" alt="")
       .uk-width-1-1
         h1.uk-h3
-          a.uk-link-reset(href="#", :title='item.title_full') {{ item.title_full}}
+          router-link.uk-link-reset(:to="link", :title='item.title_full') {{ item.title_full}}
         ul.uk-comment-meta.uk-subnav.uk-subnav-divider
           li {{ item.type }}
           li {{ item.count_ch }} главы
@@ -27,6 +27,9 @@ div
     computed: {
         tags() {
             return this.item.tags.split(', ');
+        },
+        link() {
+            return `/manga/${this.item.id}`;
         }
     }
   }

@@ -20,7 +20,7 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
                 svg(width='20', height='20', viewbox='0 0 20 20', xmlns='http://www.w3.org/2000/svg', ratio='1')
                     circle(fill='none', stroke='#000', stroke-width='1.1', cx='9', cy='9', r='7')
                     path(fill='none', stroke='#000', stroke-width='1.1', d='M14,14 L18,18 L14,14 Z')
-            input.uk-input(type='search')
+            input.uk-input(type='search', v-model='text_search')
 
 
 </template>
@@ -75,6 +75,7 @@ div(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
             this.$store.dispatch('getCatalogDataFromApi');
         },
         setSearch() {
+            console.log(this.text_search);
             if (this.text_search) {
                 this.$store.commit('setFilterItem',{
                     field: 'type',

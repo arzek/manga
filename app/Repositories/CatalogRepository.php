@@ -157,7 +157,7 @@ class CatalogRepository
         $uri = http_build_query($data);
         $url = getenv('API_MANGA_CATALOG').$uri;
 
-        return Cache::store('redis')->remember($url, 10, function () use ($url) {
+        return Cache::store('redis')->remember($url, 1440, function () use ($url) {
             $curl = new Curl();
             $curl->get($url);
             if (!$curl->error) {

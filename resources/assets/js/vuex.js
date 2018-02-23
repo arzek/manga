@@ -17,7 +17,6 @@ export default new Vuex.Store({
         },
         data: {
             catalog: [],
-            manga_id: [],
             manga: []
         }
     },
@@ -27,6 +26,11 @@ export default new Vuex.Store({
         },
         getFilterItem: (state) => (field) => {
             return state.filters[field];
+        },
+        getMangaById: (state) => (id) => {
+            return state.data.manga.find( item => {
+                return item.manga.id == id;
+            });
         }
     },
     mutations: {
@@ -35,6 +39,9 @@ export default new Vuex.Store({
         },
         setFilterItem: (state,{ field, data } ) => {
             state.filters[field] = data;
+        },
+        setManga: (state,{ data }) => {
+            state.data.manga.push(data);
         }
     },
     actions: {
@@ -62,8 +69,7 @@ export default new Vuex.Store({
         },
         getMangaById({commit},id) {
             axios.post('/manga',{ id: id }).then( (response) => {
-                console.log(response);
-                //commit('setDataCatalog',{ data: response.data});
+                commit('setManga',{ data: response.data.data });
             });
         }
     }
