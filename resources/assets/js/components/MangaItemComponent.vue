@@ -4,7 +4,8 @@ div
   article.uk-comment.uk-margin-large-bottom
     header.uk-comment-header.uk-grid-medium.uk-flex-stretch(uk-grid)
       .uk-width-1-1
-        img.uk-comment-avatar(:src="item.img" alt="")
+        router-link(:to="link")
+          img.uk-comment-avatar(:src="item.img" alt="")
       .uk-width-1-1
         h1.uk-h3
           router-link.uk-link-reset(:to="link", :title='item.title_full') {{ item.title_full}}

@@ -4,7 +4,7 @@
   .uk-offcanvas-bar.uk-flex.uk-flex-column
     ul.uk-nav.uk-nav-default
       li.uk-active.uk-margin-small
-        a(href='#').
+        router-link(to='/').
           #[span.uk-margin-small-right(uk-icon="icon: table")]
           Catalog
       li.uk-margin-small

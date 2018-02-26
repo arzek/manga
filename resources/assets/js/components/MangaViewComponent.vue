@@ -6,14 +6,14 @@
         div.uk-child-width-1-5.base-view(uk-grid)
 
           .base-view-title.uk-width-1-1.uk-h2.
-            У нас в селі такої хуйні не було #[span 1-30]
+           Том {{ chapter.vol }} - {{ chapter.ch }} #[span 1-{{ chapter.items.length }}]
 
-          div(v-for="item in chapter.items")
+          div(v-for="(item,index) in chapter.items")
             .uk-card.uk-card-default
-              a(data-caption="1" :href="item")
+              a(:data-caption="index + 1" :href="item")
                 img(:src='item' alt='')
               .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-                .uk-link-muted.uk-card-title 40/40
+                .uk-link-muted.uk-card-title {{ index + 1 }}/{{ chapter.items.length }}
     
 
 

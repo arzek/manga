@@ -27,9 +27,9 @@
                 th Название
                 th.uk-table-shrink Загружено
             tbody
-              tr(v-for='chapter in item.chapters')
+              tr(v-for='(chapter,index) in item.chapters')
                 td
-                  a.uk-link-reset(href='#') Том {{ chapter.vol }} - {{ chapter.ch }}
+                  router-link.uk-link-reset(:to='to(index)') Том {{ chapter.vol }} - {{ chapter.ch }}
                 td.uk-table-shrink {{ chapter.date }}
 
           <!--ul.uk-pagination.uk-flex-center.uk-margin-->
@@ -70,6 +70,11 @@
           tags() {
               return this.item.manga.tags.split(', ');
           },
+      },
+      methods: {
+        to(index) {
+          return '/manga/' + this.$route.params.manga_id + '/view/' + index;
+        }
       }
   }
 </script>
