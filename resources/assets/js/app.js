@@ -3,7 +3,7 @@ import './uikit';
 import VueRouter from 'vue-router';
 import routes from './routes.js';
 import MainComponent from './components/MainComponent';
-import store from './vuex';
+import store from './vuex/index';
 
 
 window.Vue = require('vue');

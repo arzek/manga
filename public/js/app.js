@@ -12386,7 +12386,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_js__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_MainComponent__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_MainComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_MainComponent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vuex__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__vuex_index__ = __webpack_require__(80);
 
 
 
@@ -12407,7 +12407,7 @@ Vue.component('main-component', __WEBPACK_IMPORTED_MODULE_4__components_MainComp
 var app = new Vue({
     el: '#app',
     router: router,
-    store: __WEBPACK_IMPORTED_MODULE_5__vuex__["a" /* default */]
+    store: __WEBPACK_IMPORTED_MODULE_5__vuex_index__["a" /* default */]
 });
 
 /***/ }),
@@ -46802,151 +46802,7 @@ if (false) {
 }
 
 /***/ }),
-/* 74 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
-    state: {
-        filters: {
-            order: {
-                name: 'Популярность',
-                value: 'popular'
-            },
-            type: null,
-            tags: null
-        },
-        data: {
-            catalog: [],
-            manga: []
-        }
-    },
-    getters: {
-        getCatalogData: function getCatalogData(state) {
-            return state.data.catalog;
-        },
-
-        getFilterItem: function getFilterItem(state) {
-            return function (field) {
-                return state.filters[field];
-            };
-        },
-        getMangaById: function getMangaById(state) {
-            return function (id) {
-                return state.data.manga.find(function (item) {
-                    return item.manga.id == id;
-                });
-            };
-        }
-    },
-    mutations: {
-        setDataCatalog: function setDataCatalog(state, _ref) {
-            var data = _ref.data;
-
-            state.data.catalog = data;
-        },
-
-        setFilterItem: function setFilterItem(state, _ref2) {
-            var field = _ref2.field,
-                data = _ref2.data;
-
-            state.filters[field] = data;
-        },
-        setManga: function setManga(state, _ref3) {
-            var data = _ref3.data;
-
-            state.data.manga.push(data);
-        }
-    },
-    actions: {
-        getCatalogDataFromApi: function getCatalogDataFromApi(_ref4) {
-            var commit = _ref4.commit,
-                state = _ref4.state;
-
-            var data = {};
-            commit('setDataCatalog', { data: [] });
-
-            if (state.filters.order) {
-                data.order = state.filters.order.value;
-            }
-
-            if (state.filters.type) {
-                data.type = state.filters.type;
-            }
-
-            if (state.filters.tags) {
-                data.tags = state.filters.tags;
-            }
-
-            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/catalog', data).then(function (response) {
-                commit('setDataCatalog', { data: response.data });
-            });
-        },
-        getMangaById: function getMangaById(_ref5, id) {
-            var commit = _ref5.commit;
-
-            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/manga', { id: id }).then(function (response) {
-                commit('setManga', { data: response.data.data });
-            });
-        }
-    }
-}));
-
-// export default new Vuex.Store({
-//     state: {
-//         data: [],
-//         selected: []
-//     },
-//     getters: {
-//         getData(state) {
-//             return state.data;
-//         },
-//         getSelected(state) {
-//             return state.selected;
-//         }
-//     },
-//     mutations: {
-//         setData(state,{ items }){
-//             state.data = items;
-//         },
-//         setSelected(state,{ selected }){
-//             state.selected = selected;
-//         },
-//     },
-//     actions: {
-//         setData({commit},data){
-//             commit('setData',{ items: data});
-//         },
-//         getDataFromApi({commit}) {
-//
-//             axios.get('/users',{
-//                 headers: {
-//                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-//                 }
-//             }).then(function (response) {
-//                 commit('setData',{ items: response.data});
-//             }).catch(function (error) {
-//                 console.log(error);
-//             });
-//         },
-//         setSelected({commit},selected){
-//             commit('setSelected',{ selected: selected});
-//         }
-//     }
-// })
-
-/***/ }),
+/* 74 */,
 /* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -47896,6 +47752,148 @@ var index_esm = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__state__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getters__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mutations__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions__ = __webpack_require__(84);
+
+
+
+
+
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
+    state: __WEBPACK_IMPORTED_MODULE_3__state__["a" /* default */],
+    getters: __WEBPACK_IMPORTED_MODULE_4__getters__["a" /* default */],
+    mutations: __WEBPACK_IMPORTED_MODULE_5__mutations__["a" /* default */],
+    actions: __WEBPACK_IMPORTED_MODULE_6__actions__["a" /* default */]
+}));
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    filters: {
+        order: {
+            name: 'Популярность',
+            value: 'popular'
+        },
+        type: null,
+        tags: null
+    },
+    data: {
+        catalog: [],
+        manga: []
+    }
+});
+
+/***/ }),
+/* 82 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    getCatalogData: function getCatalogData(state) {
+        return state.data.catalog;
+    },
+
+    getFilterItem: function getFilterItem(state) {
+        return function (field) {
+            return state.filters[field];
+        };
+    },
+    getMangaById: function getMangaById(state) {
+        return function (id) {
+            return state.data.manga.find(function (item) {
+                return item.manga.id == id;
+            });
+        };
+    }
+});
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    setDataCatalog: function setDataCatalog(state, _ref) {
+        var data = _ref.data;
+
+        state.data.catalog = data;
+    },
+
+    setFilterItem: function setFilterItem(state, _ref2) {
+        var field = _ref2.field,
+            data = _ref2.data;
+
+        state.filters[field] = data;
+    },
+    setManga: function setManga(state, _ref3) {
+        var data = _ref3.data;
+
+        state.data.manga.push(data);
+    }
+});
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+    getCatalogDataFromApi: function getCatalogDataFromApi(_ref) {
+        var commit = _ref.commit,
+            state = _ref.state;
+
+        var data = {};
+        commit('setDataCatalog', { data: [] });
+
+        if (state.filters.order) {
+            data.order = state.filters.order.value;
+        }
+
+        if (state.filters.type) {
+            data.type = state.filters.type;
+        }
+
+        if (state.filters.tags) {
+            data.tags = state.filters.tags;
+        }
+
+        axios.post('/catalog', data).then(function (response) {
+            commit('setDataCatalog', { data: response.data });
+        });
+    },
+    getMangaById: function getMangaById(_ref2, id) {
+        var commit = _ref2.commit;
+
+        axios.post('/manga', { id: id }).then(function (response) {
+            commit('setManga', { data: response.data.data });
+        });
+    }
+});
 
 /***/ })
 /******/ ]);
