@@ -55,7 +55,7 @@ main{
 }
 
 .uk-comment{
-  .uk-h3{
+  .uk-h5{
     height: 1.5em;
     overflow: hidden;
     white-space: nowrap;
@@ -64,9 +64,7 @@ main{
   }
 }
 
-.uk-comment-avatar{
-  width: 100%;
-}
+
 
 .uk-spinner.uk-icon{
   position: relative;
@@ -124,8 +122,11 @@ main{
   }
 }
 
-.uk-lightbox-toolbar {
+.uk-lightbox-toolbar{
   padding: 2rem;
+  &.uk-position-bottom{
+    padding: .5rem 2rem;
+  }
 }
 
 .uk-input, .uk-select, .uk-textarea{
@@ -196,20 +197,16 @@ main{
   text-align: justify;
 }
 
-.uk-comment-avatar{
-  height: 100%;
-  object-fit: cover;
-}
 
 .uk-nav li > a {
   display: inline-block;
 }
 
 .uk-badge {
-  padding: .2rem .8rem;
+  padding: .2rem .65rem;
   margin-bottom: .35rem;
   margin-right: .35rem;
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: normal;
   cursor: pointer;
 }

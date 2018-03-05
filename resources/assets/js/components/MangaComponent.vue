@@ -8,7 +8,7 @@
         section.uk-comment.uk-margin-large-bottom
           header.uk-comment-header.uk-grid-medium.uk-flex-stretch(uk-grid)
             .uk-width-auto
-              img.uk-comment-avatar(:src="item.manga.img" width="340" height="340" alt="")
+              img.uk-comment-avatar(:src="item.manga.img" alt="")
             .uk-width-expand
               h1.uk-comment-title
                 a.uk-link-reset.uk-h1(href="#") {{ item.manga.title_full }}
@@ -25,12 +25,16 @@
             thead
               tr
                 th Название
-                th.uk-table-shrink Загружено
+                th.uk-table-shrink 
+                  span.uk-table-shrink-wrap. 
+                    Загружено
             tbody
               tr(v-for='(chapter,index) in item.chapters')
                 td
                   router-link.uk-link-reset(:to='to(index)') Том {{ chapter.vol }} - {{ chapter.ch }}
-                td.uk-table-shrink {{ chapter.date }}
+                td.uk-table-shrink 
+                  span.uk-table-shrink-wrap. 
+                    {{ chapter.date }}
 
           <!--ul.uk-pagination.uk-flex-center.uk-margin-->
             <!--li-->
@@ -78,3 +82,11 @@
       }
   }
 </script>
+
+<style lang="scss">
+  .uk-table-shrink-wrap {
+    width: 100px;
+    display: block;
+    text-align: right;
+  }
+</style>

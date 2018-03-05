@@ -9,7 +9,7 @@
            Том {{ chapter.vol }} - {{ chapter.ch }} #[span 1-{{ chapter.items.length }}]
 
           div(v-for="(item,index) in chapter.items")
-            .uk-card.uk-card-default
+            .uk-card.uk-card-default.view-item
               a(:data-caption="index + 1 + '/' + chapter.items.length" :href="item")
                 img(:src='item' alt='')
               .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
@@ -82,3 +82,19 @@
 
     }
 </script>
+
+<style lang="scss">
+
+.base-view {
+  .view-item{
+    height: 15rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+</style>

@@ -7,7 +7,7 @@ div
         router-link(:to="link")
           img.uk-comment-avatar(:src="item.img" alt="")
       .uk-width-1-1
-        h1.uk-h3
+        h1.uk-h5
           router-link.uk-link-reset(:to="link", :title='item.title_full') {{ item.title_full}}
         ul.uk-comment-meta.uk-subnav.uk-subnav-divider
           li {{ item.type }}
