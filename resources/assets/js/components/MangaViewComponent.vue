@@ -3,28 +3,18 @@
     .base-section
       spinner-component(v-if='!item')
       .uk-padding(uk-lightbox, v-if='item')
-        div.uk-child-width-1-5.base-view(uk-grid)(v-for='chapter in chapters') 
-	
-          .base-view-title.uk-width-1-1.uk-h2. 
-           Том {{ chapter.vol }} - {{ chapter.ch }} #[span 1-{{ chapter.items.length }}]
-
-          div(v-for="(item,index) in chapter.items")
-            .uk-card.uk-card-default.view-item
-              a(:data-caption="index + 1 + '/' + chapter.items.length" :href="item")
-                img(:src='item' alt='')
-              .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
-                .uk-link-muted.uk-card-title {{ index + 1 }}/{{ chapter.items.length }}
+        chapter-component(v-for='(chapter,index) in chapters',:key='chapter.ch' :index='index' :chapter='chapter') 
 		
-        
+      p(@click='load_items') Ще !!!    
 
 </template>
 
 <script>
     import SpinnerComponent from "./SpinnerComponent";
-		import { react } from 'babel-types';
+    import ChapterComponent from "./ChapterComponent";
 
     export default {
-        components: {SpinnerComponent},
+        components: {SpinnerComponent,'chapter-component': ChapterComponent},
 				name: 'manga-view-component',
 				data() {
 					return {
@@ -33,15 +23,9 @@
 					}
 				},
         mounted() {
-          if (document.scrollHeight === document.offsetHeight) {
-            this.count++;
-          }
-						//document.addEventListener('my_event', event => this.load_items(event));
-						window.addEventListener('scroll', event => this.scroll(event))
-
-            if (!this.item) {
-                this.$store.dispatch('getMangaById',this.$route.params.manga_id);
-						} 						
+          if (!this.item) {
+            this.$store.dispatch('getMangaById',this.$route.params.manga_id);
+					} 						
         },
         computed: {
             item() {
@@ -68,15 +52,10 @@
 						}
         },
         methods: {
-            load_items(event) {
+            load_items() {
               if (this.is_load) {
-                this.count++;
+                this.count++ ;
               } 
-						},
-						scroll(event) {
-							if (document.documentElement.scrollTop + window.innerHeight >= document.body.scrollHeight){
-    						this.load_items();
-							}
 						}
         }
 
