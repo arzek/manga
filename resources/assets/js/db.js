@@ -41,8 +41,6 @@ export class LocalStore {
 						manga: item.manga, 
 						chapters: item.chapters
 					});
-				} else {
-					alert(0);
 				}
 			}
 
