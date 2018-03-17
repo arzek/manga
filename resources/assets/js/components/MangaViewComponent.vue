@@ -36,7 +36,7 @@
                 if (this.count === 1) {
                     this.is_load = true;
                     return [this.item.chapters.find((item, i) => {
-                        return i === this.$route.params.tom_id;
+                        return i === Number(this.$route.params.tom_id);
                     })];
                 } else if (this.count > 1) {
                     let data = [];

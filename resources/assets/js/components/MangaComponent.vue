@@ -58,6 +58,7 @@
 
 <script>
   import SpinnerComponent from "./SpinnerComponent";
+  import { LocalStore } from '../db';
 
   export default {
       components: {SpinnerComponent},
@@ -65,6 +66,8 @@
       mounted() {
           if (!this.item) {
               this.$store.dispatch('getMangaById',this.$route.params.manga_id);
+          } else {
+            LocalStore.addManga(this.item);
           }
       },
       computed: {
