@@ -19,7 +19,8 @@
         MangaItemComponent},
     name: 'catalog-component',
     mounted() {
-        this.$store.dispatch('getCatalogDataFromApi');
+      this.$store.commit('clearFilter');
+      this.$store.dispatch('getCatalogDataFromApi');
     },
     computed: {
         items() {

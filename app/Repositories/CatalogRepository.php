@@ -135,6 +135,7 @@ class CatalogRepository
 
     /**
      * @return mixed
+     * @throws \ErrorException
      */
     public function get()
     {
@@ -157,19 +158,43 @@ class CatalogRepository
         $uri = http_build_query($data);
         $url = getenv('API_MANGA_CATALOG').$uri;
 
-        return Cache::store('redis')->remember($url, 1440, function () use ($url) {
-            $curl = new Curl();
-            $curl->get($url);
-            if (!$curl->error) {
-                return $this->dataFormatting(json_decode($curl->rawResponse,1));
-            } else {
-                throw new Exception('Error API');
+
+
+        if ($this->getType() != 'random') {
+            try {
+                return Cache::store('redis')->remember($url, 1440, function () use ($url) {
+                    return $this->getDateFromApi($url);
+                });
+            } catch (\Exception $exception) {
+                return $this->getDateFromApi($url);
             }
-        });
+        } else {
+            return $this->getDateFromApi($url);
+        }
     }
 
+    /**
+     * @param array $data
+     * @return mixed
+     */
     private function dataFormatting(array $data)
     {
         return $data['data'];
+    }
+
+    /**
+     * @param string $url
+     * @return mixed
+     * @throws \ErrorException
+     */
+    private function getDateFromApi(string $url)
+    {
+        $curl = new Curl();
+        $curl->get($url);
+        if (!$curl->error) {
+            return $this->dataFormatting(json_decode($curl->rawResponse,1));
+        } else {
+            throw new Exception('Error API');
+        }
     }
 }

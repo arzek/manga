@@ -10,5 +10,15 @@ export default {
 	},
 	setDataHistory(state, {data}) {
 		state.data.history = data.reverse();
+	},
+	clearFilter(state) {
+		state.filters =  {
+			order: {
+				name: 'Популярность',
+				value: 'popular'
+			},
+			type: null,
+			tags: null
+		}
 	}
 }
