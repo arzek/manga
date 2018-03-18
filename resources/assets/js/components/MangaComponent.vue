@@ -58,7 +58,7 @@
 
 <script>
   import SpinnerComponent from "./SpinnerComponent";
-  import { LocalStore } from '../db';
+  import { LocalStore } from '../LocalStore';
 
   export default {
       components: {SpinnerComponent},

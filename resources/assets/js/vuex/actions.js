@@ -1,4 +1,4 @@
-import { LocalStore } from "../db";
+import { LocalStore } from "../LocalStore";
 
 export default {
     getCatalogDataFromApi({commit,state}) {

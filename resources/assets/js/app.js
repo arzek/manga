@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 import routes from './routes.js';
 import MainComponent from './components/MainComponent';
 import store from './vuex/index';
-import { LocalStore } from './db';
+import { LocalStore } from './LocalStore';
 
 
 window.Vue = require('vue');
