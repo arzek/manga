@@ -31,6 +31,10 @@ export class LocalStore {
 			window.db = db;
 		}
 	}
+
+	/**
+	 * @param item
+	 */
 	static addManga(item) {
 		let objectStore = db.transaction(["history"], "readwrite")
 			.objectStore("history");
@@ -50,6 +54,35 @@ export class LocalStore {
 
 
 		}
+	}
+
+	static getAll(fun) {
+
+		if ('db' in window) {
+			let objectStore = db.transaction(["history"], "readwrite")
+			.objectStore("history");
+			let getAllRequest = objectStore.getAll();
+
+			getAllRequest.onsuccess = () => {
+				fun(getAllRequest.result)
+			}
+		} else {
+			let db;
+			let request = window.indexedDB.open("main", 1);
+
+			request.onsuccess = (event) => {
+				db = request.result;
+				window.db = db;
+				let objectStore = db.transaction(["history"], "readwrite")
+				.objectStore("history");
+				let getAllRequest = objectStore.getAll();
+
+				getAllRequest.onsuccess = () => {
+					fun(getAllRequest.result)
+				}
+			};
+		}
+
 	}
 }
 

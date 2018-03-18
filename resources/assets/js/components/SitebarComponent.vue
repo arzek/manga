@@ -16,7 +16,7 @@
           #[span.uk-margin-small-right(uk-icon="icon: happy")]
           Random
       li.uk-margin-small
-        a(href='#').
+        router-link(to='/history').
           #[span.uk-margin-small-right(uk-icon="icon: history")]
           History
       li.uk-nav-divider.uk-margin-medium

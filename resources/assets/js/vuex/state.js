@@ -9,6 +9,7 @@ export default {
     },
     data: {
         catalog: [],
-        manga: []
+        manga: [],
+        history: []
     }
 };
