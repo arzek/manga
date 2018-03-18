@@ -5,7 +5,7 @@
 
         section.uk-padding(v-if='items.length', uk-scrollspy='target: > article; cls:uk-animation-fade; delay: 100')
             .uk-grid-medium.uk-child-width-1-4.uk-text-left(uk-grid)
-                manga-item-component(v-for="item in items", :key="item.id", :item="item")
+                manga-item-component(v-for="item in items", :key="item.id + '_' + item.date", :item="item")
 
 </template>
 

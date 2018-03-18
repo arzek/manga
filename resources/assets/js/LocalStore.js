@@ -27,7 +27,8 @@ export class LocalStore {
 			objectStore.createIndex('translation_full', 'translation_full', { unique: false });
 			objectStore.createIndex('type', 'type', { unique: false });
 			objectStore.createIndex('chapters', 'chapters', { unique: false });
-			
+			objectStore.createIndex('date', 'date', { unique: false });
+
 			window.db = db;
 		}
 	}
@@ -36,6 +37,7 @@ export class LocalStore {
 	 * @param item
 	 */
 	static addManga(item) {
+		item.date = new Date();
 		let objectStore = db.transaction(["history"], "readwrite")
 			.objectStore("history");
 		let getAllRequest = objectStore.getAll();
