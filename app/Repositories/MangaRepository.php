@@ -9,6 +9,7 @@
 namespace App\Repositories;
 
 
+use App\Entities\Manga;
 use Curl\Curl;
 use Illuminate\Support\Facades\Cache;
 
@@ -17,32 +18,39 @@ class MangaRepository
     /**
      * @param int $id
      * @return mixed
+     * @throws \ErrorException
+     * @throws \Exception
      */
     public function getById(int $id)
     {
-        $data = [
-            'secretlinkType' => getenv('SECRET_LINK_TYPE'),
-            'id' => $id
-        ];
+        try {
+            $manga = Manga::find($id);
+        }catch (\Exception $exception) {
+            return $this->getMangaFromApi($id);
+        }
 
-        $uri = http_build_query($data);
-        $url = getenv('API_MANGA_MANGA').$uri;
-        return Cache::store('redis')->remember($url,1440, function () use ($url) {
-            $curl = new Curl();
-            $curl->get($url);
-            if (!$curl->error) {
-                return $this->dataFormatting(json_decode($curl->rawResponse,1));
-            } else {
-                throw new \Exception('Error API');
+        if ($manga) {
+            return $manga;
+        } else {
+            $res = $this->getMangaFromApi($id);
+            try {
+                $manga = new Manga();
+                $manga->prepareData($res);
+                $manga->save();
+                return $manga;
+            } catch (\Exception $exception) {
+                return $res;
             }
-        });
+        }
     }
 
+    /**
+     * @param array $data
+     * @return mixed
+     */
     private function dataFormatting(array $data)
     {
-        $res = [
-            'manga' => $data['data'][0]
-        ];
+        $res = $data['data'][0];
         $count = count($data['chapter']);
         if ($count) {
             for ($i = 0; $i < $count; $i++) {
@@ -65,5 +73,31 @@ class MangaRepository
         }
 
         return $res;
+    }
+
+    /**
+     * @param int $id
+     * @return mixed
+     * @throws \ErrorException
+     * @throws \Exception
+     */
+    private function getMangaFromApi(int $id)
+    {
+        $data = [
+            'secretlinkType' => getenv('SECRET_LINK_TYPE'),
+            'id' => $id
+        ];
+
+        $uri = http_build_query($data);
+        $url = getenv('API_MANGA_MANGA').$uri;
+
+        $curl = new Curl();
+        $curl->get($url);
+
+        if (!$curl->error) {
+            return $this->dataFormatting(json_decode($curl->rawResponse,1));
+        } else {
+            throw new \Exception('Error API');
+        }
     }
 }
