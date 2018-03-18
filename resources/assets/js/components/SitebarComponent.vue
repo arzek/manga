@@ -3,19 +3,19 @@
 #offcanvas-overlay.uk-offcanvas.uk-open(uk-offcanvas='mode: slide' style="display: block;")
   .uk-offcanvas-bar.uk-flex.uk-flex-column
     ul.uk-nav.uk-nav-default
-      li.uk-active.uk-margin-small
+      li.uk-margin-small(:class="{'uk-active': isActive('/')}")
         router-link(to='/').
           #[span.uk-margin-small-right(uk-icon="icon: table")]
           Catalog
-      li.uk-margin-small
-        a(href='#').
+      li.uk-margin-small(:class="{'uk-active': isActive('/new')}")
+        router-link(to='/new').
           #[span.uk-margin-small-right(uk-icon="icon: bolt")]
           New
-      li.uk-margin-small
-        a(href='#').
+      li.uk-margin-small(:class="{'uk-active': isActive('/random')}")
+        router-link(to='/random').
           #[span.uk-margin-small-right(uk-icon="icon: happy")]
           Random
-      li.uk-margin-small
+      li.uk-margin-small(:class="{'uk-active': isActive('/history')}")
         router-link(to='/history').
           #[span.uk-margin-small-right(uk-icon="icon: history")]
           History
@@ -33,6 +33,15 @@
 
 <script>
   export default {
-    name: 'sitebar-component'
+    name: 'sitebar-component',
+    methods: {
+      isActive(route) {
+        if (this.$route.path === route) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
   }
 </script>
