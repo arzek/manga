@@ -26,7 +26,12 @@ export default {
     getMangaById({commit},id) {
         axios.post('/manga',{ id: id }).then( (response) => {
             commit('setManga',{ data: response.data.data });
-            LocalStore.addManga(response.data.data);
+            try {
+							LocalStore.addManga(response.data.data);
+            } catch(err) {
+            	console.log(err)
+            }
+
         });
     }
 }

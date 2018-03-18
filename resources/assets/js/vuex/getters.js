@@ -7,7 +7,7 @@ export default {
     },
     getMangaById: (state) => (id) => {
         return state.data.manga.find( item => {
-            return item.manga.id == id;
+            return item.id == id;
         });
     }
 };

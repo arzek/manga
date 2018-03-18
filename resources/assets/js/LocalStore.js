@@ -10,10 +10,23 @@ export class LocalStore {
 
 		request.onupgradeneeded = function (event) {
 			let db = event.target.result;
-			let objectStore = db.createObjectStore("history", { keyPath: "id", autoIncrement: true });
-			objectStore.createIndex("manga_id", "manga_id", { unique: false });
-			objectStore.createIndex("manga", "manga", { unique: false });
-			objectStore.createIndex("chapters", "chapters", { unique: false });
+			let objectStore = db.createObjectStore("history", { keyPath: "native_id", autoIncrement: true });
+
+			objectStore.createIndex('id', 'id', { unique: false });
+			objectStore.createIndex('alt_name', 'alt_name', { unique: false });
+			objectStore.createIndex('const_long', 'const_long', { unique: false });
+			objectStore.createIndex('count_ch', 'count_ch', { unique: false });
+			objectStore.createIndex('img', 'img', { unique: false });
+			objectStore.createIndex('mangaka', 'img', { unique: false });
+			objectStore.createIndex('rating', 'rating', { unique: false });
+			objectStore.createIndex('short_story', 'short_story', { unique: false });
+			objectStore.createIndex('status', 'status', { unique: false });
+			objectStore.createIndex('tags', 'tags', { unique: false });
+			objectStore.createIndex('title_full', 'title_full', { unique: false });
+			objectStore.createIndex('trans_status', 'trans_status', { unique: false });
+			objectStore.createIndex('translation_full', 'translation_full', { unique: false });
+			objectStore.createIndex('type', 'type', { unique: false });
+			objectStore.createIndex('chapters', 'chapters', { unique: false });
 			
 			window.db = db;
 		}
@@ -25,22 +38,13 @@ export class LocalStore {
 
 		getAllRequest.onsuccess = () => {
 			let data = getAllRequest.result;
-			let id = Number(item.manga.id);
-	
+
 			if (!data.length) {
-				objectStore.add({ 
-					manga_id: id, 
-					manga: item.manga, 
-					chapters: item.chapters
-				});
+				objectStore.add(item);
 			} else {
 				let last_item = data[data.length - 1];
-				if (last_item.manga_id != id) {
-					objectStore.add({ 
-						manga_id: id, 
-						manga: item.manga, 
-						chapters: item.chapters
-					});
+				if (last_item.id !== item.id) {
+					objectStore.add(item);
 				}
 			}
 
