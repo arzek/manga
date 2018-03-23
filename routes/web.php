@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 Route::post('/catalog','MainController@getCatalog');
 Route::post('/manga','MainController@getManga');
+
+
+Route::get('/test',function () {
+   echo file_get_contents('http://mangachan.ru/mmmapps/newch.php?secretlinkType=multz&type=all');
+});

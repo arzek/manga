@@ -4,7 +4,13 @@
 
 <script>
 	export default {
-		name: "new-component"
+		name: "new-component",
+        mounted() {
+            axios.get('/test').then( (response) => {
+                console.log(response.data);
+
+            });
+        }
 	}
 </script>
 
