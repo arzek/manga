@@ -6,7 +6,7 @@
 
     div(v-for="(item,index) in chapter.items")
       .uk-card.uk-card-default.view-item
-        a(:data-caption="index + 1 + '/' + chapter.items.length" :href="item")
+        a(:data-caption="index + 1 + '/' + chapter.items.length", :href="item")
           img(:src='item' alt='')
         .uk-card-body.uk-overlay.uk-overlay-default.uk-position-center.uk-padding-small.base-overlay-bottom
           .uk-link-muted.uk-card-title {{ index + 1 }}/{{ chapter.items.length }}

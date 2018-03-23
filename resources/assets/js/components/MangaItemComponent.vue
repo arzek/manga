@@ -1,10 +1,10 @@
 <template lang="pug">
 
-div
+div.uk-width-medium
   article.uk-comment.uk-margin-large-bottom
     header.uk-comment-header.uk-grid-medium.uk-flex-stretch(uk-grid)
       .uk-width-1-1
-        router-link(:to="link")
+        router-link.img-wrapper(:to="link")
           img.uk-comment-avatar(:src="item.img" alt="")
       .uk-width-1-1
         h1.uk-h5

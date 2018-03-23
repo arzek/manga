@@ -3,9 +3,10 @@
     .base-section
         spinner-component(v-if='!item')
         .uk-padding(uk-lightbox, v-if='item')
-            chapter-component(v-for='(chapter,index) in chapters',:key='chapter.ch' :index='index' :chapter='chapter')
+            chapter-component(v-for='(chapter,index) in chapters', :key='chapter.ch', :index='index', :chapter='chapter')
 
-        p(@click='load_items') Ще !!!
+        .uk-padding.uk-text-center(v-show='item')
+          button.uk-button.uk-button-primary(@click='load_items') Ще !!!
 
 </template>
 

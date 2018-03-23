@@ -18,7 +18,6 @@ Vue.use(VueRouter);
 Vue.component('main-component', MainComponent);
 
 LocalStore.init();
-
 const app = new Vue({
     el: '#app',
     router,

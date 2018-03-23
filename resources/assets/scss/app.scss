@@ -43,6 +43,14 @@ main{
 .base-section{
   min-height: calc(100vh - 80px);
   position: relative;
+  max-width: 1366px;
+
+  @media (min-width: 1366px) {
+
+    max-width: 100%;
+
+  }
+
 }
 
 .spinner-container{
@@ -80,9 +88,6 @@ main{
   }
 }
 
-.base-section{
-  max-width: 1366px;
-}
 
 .base-view-title {
   font-weight: 400;
@@ -111,8 +116,22 @@ main{
   }
 }
 
+.base-text-crop {
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+}
+
+
 // shame
 
+
+.uk-preserve-width{
+  height: 70px;
+}
 
 .uk-offcanvas-bar .uk-nav-default > li > a{
   &.base-tag{
@@ -191,6 +210,30 @@ main{
 
 .uk-container-small{
   margin: 0 auto;
+}
+
+.uk-comment-header {
+
+  @keyframes catalog-item {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  & .img-wrapper {
+    height: 377px;
+    background: darken(#f8f8f8, 20%);
+    display: block;
+    animation: catalog-item .5s ease-in-out;
+  }
+
+  & img {
+    width: 100%;
+    animation: catalog-item .5s ease-in-out;
+  }
 }
 
 .uk-comment-body{
