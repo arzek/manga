@@ -55,7 +55,7 @@ class MangaRepository
         if ($count) {
             for ($i = 0; $i < $count; $i++) {
                 $res['chapters'][$i]['vol'] = $data['chapter'][$i]['vol'];
-                $res['chapters'][$i]['ch'] = $data['chapter'][$i]['ch'];
+                $res['chapters'][$i]['ch'] = (int) $data['chapter'][$i]['ch'];
                 $res['chapters'][$i]['date'] = $data['chapter'][$i]['date'];
 
                 for ($j = 0; $j < count($data['chapter'][$i]['img_name']); $j++) {
