@@ -59,11 +59,20 @@
 <script>
 	import SpinnerComponent from "./SpinnerComponent";
 	import {LocalStore} from '../LocalStore';
+	import scrollIntoView from 'scroll-into-view';
 
 	export default {
 		components: {SpinnerComponent},
 		name: 'manga-component',
 		mounted() {
+			if (document.documentElement.scrollTop) {
+				scrollIntoView(document.getElementById('nav'), {
+					align: {
+						top: 0
+					}
+				});
+			}
+
 			if (!this.item) {
 				this.$store.dispatch('getMangaById', this.$route.params.manga_id);
 			} else {
@@ -83,7 +92,7 @@
 			},
 			countChapters() {
 				return this.item.chapters.length;
-            }
+			}
 		},
 		methods: {
 			to(index) {

@@ -1,6 +1,6 @@
 <template lang="pug">
 
-div.fixed-nav
+div.fixed-nav(id='nav')
 
   nav.uk-navbar-container.uk-margin-left.uk-margin-right(uk-navbar, v-show='$route.path === "/"')
     .uk-navbar-left

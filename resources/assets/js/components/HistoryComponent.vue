@@ -12,17 +12,28 @@
 <script>
 	import MangaItemComponent from './MangaItemComponent';
 	import SpinnerComponent from "./SpinnerComponent";
-    import {LocalStore} from "../LocalStore";
+	import {LocalStore} from "../LocalStore";
+	import scrollIntoView from 'scroll-into-view';
 
 	export default {
 		components: {
 			SpinnerComponent,
-			MangaItemComponent},
+			MangaItemComponent
+		},
 		name: 'history-component',
 		mounted() {
-          LocalStore.getAll( (data) => {
-          	this.$store.commit('setDataHistory',{data: data});
-          })
+			if (document.documentElement.scrollTop) {
+				scrollIntoView(document.getElementById('nav'), {
+					align: {
+						top: 0
+					}
+				});
+			}
+
+
+			LocalStore.getAll((data) => {
+				this.$store.commit('setDataHistory', {data: data});
+			})
 		},
 		computed: {
 			items() {

@@ -13,6 +13,7 @@
 <script>
 	import SpinnerComponent from "./SpinnerComponent";
 	import ChapterComponent from "./ChapterComponent";
+	import scrollIntoView from 'scroll-into-view';
 
 	export default {
 		components: {SpinnerComponent, 'chapter-component': ChapterComponent},
@@ -24,6 +25,14 @@
 			}
 		},
 		mounted() {
+			if (document.documentElement.scrollTop) {
+				scrollIntoView(document.getElementById('nav'), {
+					align: {
+						top: 0
+					}
+				});
+			}
+
 			if (!this.item) {
 				this.$store.dispatch('getMangaById', this.$route.params.manga_id);
 			}
@@ -38,7 +47,7 @@
 					this.is_load = true;
 					let res = this.item.chapters.find(item => {
 						return item.ch === this.tomId;
-                    });
+					});
 					return [res];
 				} else if (this.count > 1) {
 					let data = [];
@@ -62,8 +71,8 @@
 			},
 			countAllChapters() {
 				if (this.item) {
-                  return this.item.chapters[0].ch;
-                }
+					return this.item.chapters[0].ch;
+				}
 			},
 			isLastChapter() {
 				let count = (this.count - 1) + this.tomId;
