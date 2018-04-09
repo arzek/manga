@@ -8,7 +8,6 @@
 
 namespace App\Repositories;
 
-
 use App\Entities\Manga;
 use Curl\Curl;
 use Illuminate\Support\Facades\Cache;

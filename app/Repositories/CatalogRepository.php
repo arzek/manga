@@ -152,6 +152,7 @@ class CatalogRepository
         }
 
         if ($this->getTags()) {
+        	
             $data['tags'] = $this->getTags();
         }
 

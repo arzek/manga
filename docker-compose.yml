@@ -2,6 +2,7 @@ version: '3'
 services:
   web:
     image: nginx
+    container_name: nginx
     ports:
       - "8000:80"
     volumes:
@@ -12,6 +13,7 @@ services:
 
   php:
     build: .
+    container_name: php
     volumes:
       - ./:/var/www/html
     links:
@@ -20,10 +22,12 @@ services:
 
   redis:
     image: redis
+    container_name: redis
     ports: 
       - "6379:6379"
 
   postgres:
     image: postgres
+    container_name: postgres
     ports:
       - "5432:5432"
