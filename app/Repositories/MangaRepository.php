@@ -77,10 +77,8 @@ class MangaRepository
     /**
      * @param int $id
      * @return mixed
-     * @throws \ErrorException
-     * @throws \Exception
      */
-    private function getMangaFromApi(int $id)
+    public function getMangaFromApi(int $id)
     {
         $data = [
             'secretlinkType' => getenv('SECRET_LINK_TYPE'),
@@ -90,13 +88,14 @@ class MangaRepository
         $uri = http_build_query($data);
         $url = getenv('API_MANGA_MANGA').$uri;
 
-        $curl = new Curl();
-        $curl->get($url);
-
-        if (!$curl->error) {
-            return $this->dataFormatting(json_decode($curl->rawResponse,1));
-        } else {
-            throw new \Exception('Error API');
-        }
+        return Cache::store('redis')->remember($url, 1440, function () use ($url) {
+            $curl = new Curl();
+            $curl->get($url);
+            if (!$curl->error) {
+                return $this->dataFormatting(json_decode($curl->rawResponse,1));
+            } else {
+                throw new \Exception('Error API');
+            }
+        });
     }
 }

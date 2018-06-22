@@ -10,9 +10,9 @@ const routes = [
 	{path: '/history', component: HistoryComponent},
 	{path: '/new', component: NewComponent},
 	{path: '/random', component: RandomComponent},
-	{path: '/manga/:manga_id', component: MangaComponent},
-	{path: '/manga/:manga_id/view', component: MangaViewComponent},
-	{path: '/manga/:manga_id/view/:tom_id', component: MangaViewComponent}
+	{path: '/manga/:mangaId', component: MangaComponent},
+	{path: '/manga/:mangaId/view', component: MangaViewComponent},
+	{path: '/manga/:mangaId/view/:tomId/:chapterId', component: MangaViewComponent}
 ];
 
 export default routes;

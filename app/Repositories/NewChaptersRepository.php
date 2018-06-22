@@ -21,16 +21,20 @@ class NewChaptersRepository
 	{
 		$data = [
 			'secretlinkType' => getenv('SECRET_LINK_TYPE'),
-			'id' => $id
+			'type' => 'all'
 		];
+        $uri = http_build_query($data);
+        $url = getenv('API_MANGA_NEW_CHAPTERS').$uri;
 
-		$curl = new Curl();
-		$data = [
-			'secretlinkType' => getenv('SECRET_LINK_TYPE'),
-			'id' => $id
-		];
-		return Cache::store('redis')->remember($url, 1440, function () use ($url) {
-			return $this->getDateFromApi($url);
+		return Cache::store('redis')->remember($url, 2, function () use ($url) {
+            $curl = new Curl();
+            $curl->get($url);
+            if (!$curl->error) {
+                return json_decode($curl->rawResponse,1)['newch_list'];
+            } else {
+                throw new \Exception('Error API');
+            }
+
 		});
 
 	}

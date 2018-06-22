@@ -31,28 +31,10 @@
                     tbody
                         tr(v-for='chapter in item.chapters')
                             td
-                                router-link.uk-link-reset(:to='to(chapter.ch)') Том {{ chapter.vol }} - {{ chapter.ch }}
+                                router-link.uk-link-reset(:to='to(chapter.vol, chapter.ch)') Том {{ chapter.vol }} - {{ chapter.ch }}
                             td.uk-table-shrink
                                 span.uk-table-shrink-wrap.
                                     {{ chapter.date }}
-
-                <!--ul.uk-pagination.uk-flex-center.uk-margin-->
-                <!--li-->
-                <!--a(href='#')-->
-                <!--span(uk-icon="icon: chevron-left")-->
-                <!--li-->
-                <!--a(href='#') 1-->
-                <!--li-->
-                <!--a(href='#') 2-->
-                <!--li.uk-active-->
-                <!--a(href='#') 3-->
-                <!--li.uk-disabled-->
-                <!--span ...-->
-                <!--li-->
-                <!--a(href='#') 40-->
-                <!--li-->
-                <!--a(href='#')-->
-                <!--span(uk-icon="icon: chevron-right")-->
 
 </template>
 
@@ -72,20 +54,11 @@
 					}
 				});
 			}
-
-			if (!this.item) {
-				this.$store.dispatch('getMangaById', this.$route.params.manga_id);
-			} else {
-				try {
-					LocalStore.addManga(this.item);
-				} catch (err) {
-					console.log(err)
-				}
-			}
+      this.$store.dispatch("getManga", this.$route.params.mangaId);
 		},
 		computed: {
 			item() {
-				return this.$store.getters.getMangaById(this.$route.params.manga_id);
+				return this.$store.getters.getMangaById(this.$route.params.mangaId);
 			},
 			tags() {
 				return this.item.tags.split(', ');
@@ -95,8 +68,8 @@
 			}
 		},
 		methods: {
-			to(index) {
-				return '/manga/' + this.$route.params.manga_id + '/view/' + index;
+			to(tom, chapter) {
+				return `/manga/${this.$route.params.mangaId}/view/${tom}/${chapter}`;
 			}
 		}
 	}

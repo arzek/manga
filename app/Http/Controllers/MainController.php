@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\CatalogRepository;
 use App\Repositories\MangaRepository;
+use App\Repositories\NewChaptersRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -56,7 +57,7 @@ class MainController extends Controller
         ]);
 
         try {
-            $res = $mangaRepository->getById($request->input('id'));
+            $res = $mangaRepository->getMangaFromApi($request->input('id'));
             return response()->json([
                 'status' => true,
                 'data' => $res
@@ -67,5 +68,17 @@ class MainController extends Controller
                 'message' => $exception->getMessage()
             ]);
         }
+    }
+
+    /**
+     * @param NewChaptersRepository $newChaptersRepository
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getNew(NewChaptersRepository $newChaptersRepository)
+    {
+        return response()->json([
+            'status' => true,
+            'data' => $newChaptersRepository->getChapters()
+        ]);
     }
 }

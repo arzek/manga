@@ -10,6 +10,8 @@ export default {
     data: {
         catalog: [],
         manga: [],
-        history: []
+        currentManga: null,
+        history: [],
+        newChapters: []
     }
 };

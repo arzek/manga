@@ -162,13 +162,9 @@ class CatalogRepository
 
 
         if ($this->getType() != 'random') {
-            try {
-                return Cache::store('redis')->remember($url, 1440, function () use ($url) {
-                    return $this->getDateFromApi($url);
-                });
-            } catch (\Exception $exception) {
+            return Cache::store('redis')->remember($url, 1440, function () use ($url) {
                 return $this->getDateFromApi($url);
-            }
+            });
         } else {
             return $this->getDateFromApi($url);
         }

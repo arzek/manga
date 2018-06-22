@@ -16,7 +16,8 @@
 	export default {
 		components: {
 			SpinnerComponent,
-			MangaItemComponent},
+			MangaItemComponent
+        },
 		name: 'random-component',
 		mounted() {
             this.$store.commit('clearFilter');

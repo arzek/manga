@@ -22,16 +22,16 @@ div.uk-width-medium
 </template>
 
 <script>
-    export default {
-    name: 'manga-item-component',
-    props: ['item'],
-    computed: {
-        tags() {
-            return this.item.tags.split(', ');
-        },
-        link() {
-            return `/manga/${this.item.id}`;
-        }
+export default {
+  name: "manga-item-component",
+  props: ["item"],
+  computed: {
+    tags() {
+      return this.item.tags.split(", ");
+    },
+    link() {
+      return `/manga/${this.item.id}`;
     }
   }
+};
 </script>
