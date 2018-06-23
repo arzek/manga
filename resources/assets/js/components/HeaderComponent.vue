@@ -16,25 +16,23 @@ div.fixed-nav(id='nav')
 
     .uk-navbar-right
       .uk-navbar-item
-        .uk-inline
-            a.uk-form-icon.uk-form-icon-flip.uk-icon(@click="setSearch()")
+        form.uk-inline(@submit.prevent="search()")
+            a.uk-form-icon.uk-form-icon-flip.uk-icon(@click="search()")
                 svg(width='20', height='20', viewbox='0 0 20 20', xmlns='http://www.w3.org/2000/svg', ratio='1')
                     circle(fill='none', stroke='#000', stroke-width='1.1', cx='9', cy='9', r='7')
                     path(fill='none', stroke='#000', stroke-width='1.1', d='M14,14 L18,18 L14,14 Z')
-            input.uk-input(type='search', v-model='text_search')
+            input.uk-input(type='search', v-model='textSearch')
 </template>
 
 <script>
-
   import SitebarComponent from './SitebarComponent';
-
   export default {
     components: {SitebarComponent},
     name: 'header-component',
     data() {
         return {
-            text_search: '',
-            order_items: [
+            textSearch: '',
+            orderItems: [
                 {
                     name: 'Популярность',
                     value: 'popular'
@@ -60,7 +58,7 @@ div.fixed-nav(id='nav')
             return this.$store.getters.getFilterItem('order');
         },
         order_list() {
-            return this.order_items.filter( item => {
+            return this.orderItems.filter( item => {
                return this.order.value !== item.value;
             });
         }
@@ -73,16 +71,15 @@ div.fixed-nav(id='nav')
             });
             this.$store.dispatch('getCatalogDataFromApi');
         },
-        setSearch() {
-            console.log(this.text_search);
-            if (this.text_search) {
+        search() {
+            if (this.textSearch) {
                 this.$store.commit('setFilterItem',{
                     field: 'type',
                     data: 'search'
                 });
                 this.$store.commit('setFilterItem',{
                     field: 'tags',
-                    data: this.text_search
+                    data: this.textSearch
                 });
             } else {
                 this.$store.commit('setFilterItem',{
@@ -95,6 +92,7 @@ div.fixed-nav(id='nav')
                 });
             }
             this.$store.dispatch('getCatalogDataFromApi');
+            this.textSearch = '';
         }
     },
     watch: {

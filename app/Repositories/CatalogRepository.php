@@ -174,7 +174,7 @@ class CatalogRepository
      * @param array $data
      * @return mixed
      */
-    private function dataFormatting(array $data)
+    private function dataFormatting($data)
     {
         return $data['data'];
     }

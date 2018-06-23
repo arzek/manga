@@ -35,7 +35,7 @@ class MainController extends Controller
 
         try {
             $res = $catalogRepository->get();
-            return response($res,200)->header('Content-Type', 'application/json');
+            return response($res, 200)->header('Content-Type', 'application/json');
         } catch (\Exception $exception) {
             return response()->json([
                 'status' => false,

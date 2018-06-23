@@ -7,7 +7,7 @@
         router-link(to='/').
           #[span.uk-margin-small-right(uk-icon="icon: table")]
           Catalog
-      li.uk-margin-small(:class="{'uk-active': isActive('/new')}")
+      li.uk-margin-small(:class="{'uk-active': isActive('/new')}", v-if="type == 'Hentai'")
         router-link(to='/new').
           #[span.uk-margin-small-right(uk-icon="icon: bolt")]
           New
@@ -19,11 +19,15 @@
         router-link(to='/history').
           #[span.uk-margin-small-right(uk-icon="icon: history")]
           History
-      li.uk-nav-divider.uk-margin-medium
-      li.uk-margin-small
-        a.base-tag(href='#') школа
-        a.base-tag(href='#') комедия
-        a.base-tag(href='#') веб
+      li.uk-margin-small(v-if="link && type")
+        a(:href='link').
+          #[span.uk-margin-small-right(uk-icon="icon: star")]
+          {{ type }}        
+      // li.uk-nav-divider.uk-margin-medium
+      // li.uk-margin-small
+      //   a.base-tag(href='#') школа
+      //   a.base-tag(href='#') комедия
+      //   a.base-tag(href='#') веб
       li.uk-nav-divider.uk-margin-medium
       li.uk-margin-small
         a(href='#').
@@ -34,6 +38,17 @@
 <script>
   export default {
     name: 'sitebar-component',
+    mounted() {
+      this.$store.dispatch('getConfig');
+    },
+    computed: {
+      type() {
+        return this.$store.getters.getConfigItem('type');
+      },
+      link() {
+        return this.$store.getters.getConfigItem('link');
+      }
+    },
     methods: {
       isActive(route) {
         if (this.$route.path === route) {

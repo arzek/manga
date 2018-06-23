@@ -2,7 +2,7 @@
 
   div.uk-child-width-1-5.base-view(uk-grid)
     .base-view-title.uk-width-1-1.uk-h2. 
-      Том {{ chapter.vol }} - {{ chapter.ch }} #[span 1-{{ chapter.items.length }}]
+      {{ title(chapter.vol, chapter.ch) }} #[span 1-{{ chapter.items.length }}]
 
     div(v-for="(item,index) in chapter.items")
       .uk-card.uk-card-default.view-item
@@ -16,6 +16,15 @@
 <script>
 export default {
   name: 'chapter-component',
-  props: ['chapter','index']
+  props: ['chapter','index'],
+  methods: {
+    title(vol, ch) {
+      if (vol == '-', ch == '0') {
+        return `Глава - ${ ch }`
+      } else {
+        return `Том ${ vol } - ${ ch }`
+      }
+    }
+  }
 }
 </script>

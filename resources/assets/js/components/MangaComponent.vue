@@ -31,7 +31,7 @@
                     tbody
                         tr(v-for='chapter in item.chapters')
                             td
-                                router-link.uk-link-reset(:to='to(chapter.vol, chapter.ch)') Том {{ chapter.vol }} - {{ chapter.ch }}
+                                router-link.uk-link-reset(:to='to(chapter.vol, chapter.ch)') {{ nameCh(chapter.vol, chapter.ch) }}
                             td.uk-table-shrink
                                 span.uk-table-shrink-wrap.
                                     {{ chapter.date }}
@@ -69,8 +69,20 @@
 		},
 		methods: {
 			to(tom, chapter) {
-				return `/manga/${this.$route.params.mangaId}/view/${tom}/${chapter}`;
-			}
+        if (tom !== '-' && chapter!== 0) {
+          return `/manga/${this.$route.params.mangaId}/view/${tom}/${chapter}`;
+        } else if (tom === '-' && chapter=== 0) {
+          return `/manga/${this.$route.params.mangaId}/view/${chapter}`;
+        }
+				
+      },
+      nameCh(tom, chapter) {
+        if (tom !== '-' && chapter!== 0) {
+          return `Том ${tom} - ${chapter}`
+        } else if (tom == '-' && chapter == 0) {
+          return `Глава - ${chapter}`
+        } 
+      }
 		}
 	}
 </script>

@@ -54,8 +54,15 @@ export default {
     });
   },
   getNewChapters({ commit }) {
-    axios.get('/new').then((response) => {
+    axios.post('/new').then((response) => {
       commit('setNewChapters', { data: response.data.data })
     });
+  },
+  getConfig({ commit }) {
+    axios.post('/config').then((response) => {
+      commit('setConfig', {
+        data: response.data
+      })
+    })
   }
 }

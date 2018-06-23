@@ -12,7 +12,8 @@ const routes = [
 	{path: '/random', component: RandomComponent},
 	{path: '/manga/:mangaId', component: MangaComponent},
 	{path: '/manga/:mangaId/view', component: MangaViewComponent},
-	{path: '/manga/:mangaId/view/:tomId/:chapterId', component: MangaViewComponent}
+  {path: '/manga/:mangaId/view/:tomId/:chapterId', component: MangaViewComponent},
+  {path: '/manga/:mangaId/view/:chapterId', component: MangaViewComponent}
 ];
 
 export default routes;

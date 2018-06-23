@@ -26,5 +26,9 @@ export default {
   },
   setCurrentManga(state, { data }) {
     state.data.currentManga = data;
+  },
+  setConfig(state, { data }) {
+    state.config.type = data.type;
+    state.config.link = data.link;
   }
 }

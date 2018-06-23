@@ -18,5 +18,8 @@ export default {
   },
   getCurrentManga(state) {
     return state.data.currentManga;
+  },
+  getConfigItem: (state) => (field) => {
+    return state.config[field];
   }
 };

@@ -17,12 +17,10 @@ Route::get('/', function () {
 
 Route::post('/catalog','MainController@getCatalog');
 Route::post('/manga','MainController@getManga');
-Route::get('/new','MainController@getNew');
-Route::get('/test2', function () {
-    $curl = new \Curl\Curl();
-    $start = microtime(true);
-    $curl->get('http://mangachan.ru/mmmapps/manga.php?secretlinkType=multz&id=3175');
-    $end = microtime(true); //конец измерения
-    \Illuminate\Support\Facades\Log::info(($end - $start));
-    return $curl->rawResponse;
+Route::post('/new','MainController@getNew');
+Route::post('/config', function () {
+  return response()->json([
+    'type' => env('TYPE'),
+    'link' => env('LINK')
+    ]);
 });

@@ -29,8 +29,6 @@
 					}
 				});
 			}
-
-
 			LocalStore.getAll((data) => {
 				this.$store.commit('setDataHistory', {data: data});
 			})

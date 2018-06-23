@@ -73,6 +73,10 @@ export default {
       this.nextCh--;
     },
     setFirstItem() {
+      if (!this.$route.params.tomId && this.$route.params.chapterId === '0') {
+        this.chapters.push( this.item.chapters[0]); 
+      }
+
       let length = this.item.chapters.length;
       if (length) {
         for (let i = 0; i < this.item.chapters.length; i++) {
