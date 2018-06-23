@@ -1,7 +1,7 @@
 <template lang="pug">
 
 main.uk-offcanvas-content
-  header-component
+  header-component(v-if='$route.path === "/"')
 
   router-view
 
