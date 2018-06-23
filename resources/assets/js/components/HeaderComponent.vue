@@ -1,8 +1,8 @@
 <template lang="pug">
 
-div.fixed-nav(id='nav')
+div.fixed-nav(id='nav', v-if='$route.path === "/"')
 
-  nav.uk-navbar-container.uk-margin-left.uk-margin-right(uk-navbar, v-show='$route.path === "/"')
+  nav.uk-navbar-container.uk-margin-left.uk-margin-right(uk-navbar)
     .uk-navbar-left
       ul.uk-navbar-nav
         li.uk-margin-right

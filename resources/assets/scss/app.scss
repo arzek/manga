@@ -20,6 +20,7 @@
 
 $baseFont: 'Rubik', sans-serif;
 $baseBorder: 2rem;
+$sidebarOffset: 250px;
 
 // defaults
 
@@ -30,8 +31,6 @@ $baseBorder: 2rem;
 
 html, body {
   font-family: $baseFont;
-  //font-family: 'Alegreya Sans', sans-serif;
-  //font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-variant: normal;
 }
@@ -41,8 +40,7 @@ main{
 }
 
 .base-section{
-  min-height: calc(100vh - 80px);
-  position: relative;
+  min-height: 100vh;
   max-width: 1366px;
 
   @media (min-width: 1366px) {
@@ -53,10 +51,26 @@ main{
 
 }
 
+// fixed nav
+
+.fixed-nav {
+
+  + .base-section {
+    margin-top: -80px;
+    padding-top: 80px;
+    box-sizing: border-box;
+  }
+
+}
+
 .spinner-container{
   position: absolute;
-  height: 100%;
-  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: $sidebarOffset;
+  height: initial;
+  width: initial;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,13 +84,6 @@ main{
     text-overflow: ellipsis;
     word-break: break-all;
   }
-}
-
-
-
-.uk-spinner.uk-icon{
-  position: relative;
-  top: -70px
 }
 
 .base-tag{
@@ -190,11 +197,11 @@ main{
 
 .uk-offcanvas-bar {
   padding-top: 120px;
-  width: 300px;
+  width: $sidebarOffset;
 }
 
 .uk-offcanvas-container .uk-offcanvas-content {
-  padding-left: 300px;
+  padding-left: $sidebarOffset;
 }
 
 
@@ -224,7 +231,7 @@ main{
   }
 
   & .img-wrapper {
-    height: 377px;
+    height: inherit;
     background: darken(#f8f8f8, 20%);
     display: block;
     animation: catalog-item .5s ease-in-out;

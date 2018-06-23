@@ -30,8 +30,13 @@
       //   a.base-tag(href='#') веб
       li.uk-nav-divider.uk-margin-medium
       li.uk-margin-small
+        span Зроблено атдуши 
         a(href='#').
-          Зроблено атдуши #[br] by Arzek & gotoredo
+          by Arzek & gotoredo
+      li.uk-margin-small
+        span Feedback:
+        a(href='mailto:arzek2015@gmail.com').
+          arzek2015@gmail.com
 
 </template>
 

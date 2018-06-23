@@ -1,6 +1,6 @@
 <template lang="pug">
 
-div.uk-width-medium
+div
   article.uk-comment.uk-margin-large-bottom
     header.uk-comment-header.uk-grid-medium.uk-flex-stretch(uk-grid)
       .uk-width-1-1

@@ -33,4 +33,5 @@ document.addEventListener('itemshow', (e) => {
 
 document.addEventListener('hidden', () => {
   document.body.style = '';
+  document.querySelector('html').classList.remove("uk-lightbox-page");
 })
