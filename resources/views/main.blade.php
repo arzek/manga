@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ env('TYPE') }}</title>
+    <title>{{ env('TITLE') }}</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="uk-offcanvas-container">
