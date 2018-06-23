@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Manga</title>
+    <title>{{ env('TYPE') }}</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="uk-offcanvas-container">
