@@ -4,8 +4,11 @@
         spinner-component(v-if='!items.length')
 
         section.uk-padding(v-if='items.length', uk-scrollspy='target: > article; cls:uk-animation-fade; delay: 100')
-            .uk-grid-medium.uk-child-width-1-4.uk-text-left(uk-grid)
-                manga-item-component(v-for="item in items", :key="item.id + '_' + item.date", :item="item")
+          .uk-grid.uk-grid-medium.uk-text-left(
+            uk-grid,
+            class="uk-child-width-1-1@xs uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-child-width-1-5@xl"
+          )
+            manga-item-component(v-for="item in items", :key="item.id + '_' + item.date", :item="item")
 
 </template>
 
