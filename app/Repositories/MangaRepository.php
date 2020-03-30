@@ -58,7 +58,7 @@ class MangaRepository
                 $res['chapters'][$i]['date'] = $data['chapter'][$i]['date'];
 
                 for ($j = 0; $j < count($data['chapter'][$i]['img_name']); $j++) {
-                    $res['chapters'][$i]['items'][] = $data['site_list'][0].'/'
+                    $res['chapters'][$i]['items'][] = 'https://im3.manga-chan.me/'
                         .$data['middle_url'][0].'/'
                         .$data['chapter'][$i]['dir'].'/'
                         .$data['chapter'][$i]['img_name'][$j].'.'
