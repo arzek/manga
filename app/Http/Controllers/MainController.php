@@ -39,7 +39,7 @@ class MainController extends Controller
         } catch (\Exception $exception) {
             return response()->json([
                 'status' => false,
-                'message' => $exception->getMessage()
+                'message' => $exception
             ]);
         }
 
