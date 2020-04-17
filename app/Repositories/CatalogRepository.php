@@ -188,9 +188,7 @@ class CatalogRepository
     {
         $curl = new Curl();
         $curl->get($url);
-        
-        echo $url;
-        
+       
         if (!$curl->error) {
             return $this->dataFormatting(json_decode($curl->rawResponse,1));
         } else {
