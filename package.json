@@ -14,7 +14,7 @@
         "cross-env": "^5.2.0",
         "laravel-mix": "^2.1.11",
         "lodash": "^4.17.10",
-        "pug": "^2.0.3",
+        "pug": "^3.0.1",
         "scroll-into-view": "^1.9.3",
         "stylus": "^0.54.5",
         "stylus-loader": "^3.0.2",
