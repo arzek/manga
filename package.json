@@ -13,7 +13,7 @@
         "axios": "^0.18.0",
         "cross-env": "^5.2.0",
         "laravel-mix": "^2.1.11",
-        "lodash": "^4.17.10",
+        "lodash": "^4.17.21",
         "pug": "^2.0.3",
         "scroll-into-view": "^1.9.3",
         "stylus": "^0.54.5",
